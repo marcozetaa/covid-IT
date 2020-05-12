@@ -1,26 +1,72 @@
+
 <html>
     <head>
         <title>EsercitazioneLab - Pagina di Login</title>
         <meta charset="utf-8"/>
-        <meta name="viewport" content="width-device-width, initial scale=1"/>
         <link href="../css/bootstrap.min.css" rel="stylessheet"/>
         <link href="signin.css" rel="stylesheet"/>
-        <script type="text/javascript" lang="javascript" src="../js/bootstrap.bundle.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" lang="javascript" src="../js/bootstrap.min.js"></script>
         <script type="text/javascript" lang="javascript" src="./loginScript.js"></script>
     </head>
-    <body class="text-center">
-        <form action="login.php" class="form-signin" method="POST" name="myForm" onsubmit="return validaForm()">
-            <img class="mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"/>
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-            <input type="email" name="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-            <input type="password" name="inputPassword" class="form-control" placeholder="Password" required>
-            <div id="divremember" class="checkbox mb-3">
-                <input type="checkbox" name="remember"/>
-                <label for="remember">Remember me</label>
+    <body>
+            <div class="login-reg-panel">
+                <div class="login-info-box">
+                    <h2>Hai già un account?</h2>
+                    <p>Clicca qui per accedere</p>
+                    <label id="label-register" for="log-reg-show">Login</label>
+                    <input type="radio" name="active-log-panel" id="log-reg-show" checked="checked">
+                </div>
+                                    
+                <div class="register-info-box">
+                    <h2>Non hai un account?</h2>
+                    <p>Clicca qui per registrarti</p>
+                    <label id="label-login" for="log-login-show">Registrati</label>
+                    <input type="radio" name="active-log-panel" id="log-login-show">
+                </div>
+                                    
+                <div class="white-panel">
+                    <div class="login-show">
+                        <h2>LOGIN</h2>
+                        <input type="text" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button class="login-btn-show" name="loginButton" type="submit">Log in</button>
+                        <a href="">Password dimenticata?</a>
+                    </div>
+                    <div class="register-show">
+                        <h2>REGISTER</h2>
+                        <input type="text" placeholder="Nome" required>
+                        <input type="text" placeholder="Cognome" required>
+                        <select size="1" id="regioni" required>
+                            <option value="Nessuna" disabled selected>Regione</option>
+                            <option value="Abruzzo">Abruzzo</option>
+                            <option value="Basilicata">Basilicata</option>
+                            <option value="Calabria">Calabria</option>
+                            <option value="Campania">Campania</option>
+                            <option value="Emilia Romagna">Emilia Romagna</option>
+                            <option value="Friuli-Venezia Giulia">Friuli-Venezia Giulia</option>
+                            <option value="Lazio">Lazio</option>
+                            <option value="Liguria">Liguria</option>
+                            <option value="Lombardia">Lombardia</option>
+                            <option value="Marche">Marche</option>
+                            <option value="Molise">Molise</option>
+                            <option value="Piemonte">Piemonte</option>
+                            <option value="Puglia">Puglia</option>
+                            <option value="Sardegna ">Sardegna </option>
+                            <option value="Sicilia">Sicilia</option>
+                            <option value="Trentino-Alto Adige">Trentino-Alto Adige</option>
+                            <option value="Toscana">Toscana</option>
+                            <option value="Umbria">Umbria</option>
+                            <option value="Veneto">Veneto</option>
+                            <option value="Valle d'Aosta">Valle d'Aosta</option>
+                        </select>
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Confirm Password">
+                        <button class="reg-btn-show" name="RegisterButton" type="submit">Register</button>
+                    </div>
+                </div>
             </div>
-            <br>
-
-            <button class="btn btn-lg btn-primary btn-block" name="loginButton" type="submit">Sign in</button> 
-        </form>
     </body>
-</html>   
+</html>  

@@ -1,8 +1,33 @@
-function validaForm(){
-    if(document.myForm.remember.checked) {
-        window.alert("Hai scelto di ricordarti per i prossimi accessi")
-    }
-    else{
-        window.alert("Hai scelto di non ricordarti per i prossimi accessi")
-    }
-}
+
+$(document).ready(function(){
+    $('.login-info-box').fadeOut();
+    $('.login-show').addClass('show-log-panel');
+    $('.login-reg-panel input[type="radio"]').on('change', function() {
+        if($('#log-login-show').is(':checked')) {
+            $('.register-info-box').fadeOut(); 
+            $('.login-info-box').fadeIn();
+            
+            $('.white-panel').addClass('right-log');
+            $('.white-panel').addClass('down-log');
+            
+            $('.register-show').addClass('show-log-panel');
+            $('.login-show').removeClass('show-log-panel');
+            
+        }
+        else if($('#log-reg-show').is(':checked')) {
+            $('.register-info-box').fadeIn();
+            $('.login-info-box').fadeOut();
+            
+            $('.white-panel').removeClass('right-log');
+            $('.white-panel').removeClass('down-log');
+            
+            $('.login-show').addClass('show-log-panel');
+            $('.register-show').removeClass('show-log-panel');
+        }
+    });
+
+    $('#regioni > option').each(function(){
+        $(this).addClass('select-items');
+    });
+});
+    
