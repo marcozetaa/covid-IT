@@ -7,9 +7,10 @@ $(document).ready(function(){
             $('.register-info-box').fadeOut(); 
             $('.login-info-box').fadeIn();
             
-            $('.white-panel').addClass('right-log');
-            $('.white-panel').addClass('down-log');
+            $('.white-panel').addClass('right-log'); 
+            $('.white-panel').addClass('down-log'); 
             
+
             $('.register-show').addClass('show-log-panel');
             $('.login-show').removeClass('show-log-panel');
             
