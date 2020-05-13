@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #fdfdfd;
+    min-height: 100vh;
+
+}
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+  }
+  
+  .header h1 {
+    font-size: 50px;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
+
+/* Stile per tabella Dati */
+
+/* Colours */
+/* fonts */
+body {
+  font-family: "Assistant", sans-serif;
+}
+
+h1, h2, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "Assistant", sans-serif;
+  font-weight: 300;
+  text-transform: none;
+}
+
+p {
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* Utilities */
+.no-padding {
+  padding: 0 !important;
+}
+
+/* width */
+.container {
+  width: 1080px;
+}
+
+/* Table Heading */
+.pricing-top-heading th {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  width: 33%;
+}
+
+.pricing-bottom-heading th {
+  padding: 0 2%;
+  font-weight: 300;
+}
+
+.pricing-top-heading .free {
+  background-color: #f26b42;
+  border: 1px solid #f26b42;
+}
+
+.pricing-bottom-heading .free {
+  background-color: #f28d6e;
+  border: 1px solid #f28d6e;
+}
+
+.pricing-top-heading .basic {
+  background-color: #58c5c7;
+  border: 1px solid #58c5c7;
+}
+
+.pricing-bottom-heading .basic {
+  background-color: #7fd1d2;
+  border: 1px solid #7fd1d2;
+}
+
+.pricing-top-heading .pro {
+  background-color: #a5c653;
+  border: 1px solid #a5c653;
+}
+
+.pricing-bottom-heading .pro {
+  background-color: #b9d17b;
+  border: 1px solid #b9d17b;
+}
+
+.pricing-top-heading,
+.pricing-bottom-heading {
+  color: white;
+  height: 90px;
+}
+
+table thead th {
+  border: 0;
+}
+
+/* table */
+table {
+  width: 100%;
+}
+
+.collapsible-section-header {
+  background-color: #e1e1e1;
+}
+
+.collapsible-section-header a {
+  color: #363636;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.collapsible-section-header a:after {
+  content: '\25bc';
+  padding-left: 0.5em;
+}
+
+.collapsible-section-header a.collapsed:after {
+  content: '\25ba';
+  padding-left: 0.5em;
+}
+
+tbody td {
+  background-color: #ededed;
+  border: 1px solid #d1d1d1;
+  padding: 1.25rem;
+}
+
+/* Stile per lista regioni */
+
+#lista-regioni ul, li{
+  list-style-type: none;
+}
+
+.select-box__option {
+  display: block;
+  padding: 13px;
+  margin: 10px;
+  background-color: #ffffff;
+  box-shadow: 15px 0 9px 0 #b6b6b6;
+}
+.select-box__option:hover, .select-box__option:focus {
+  color: #d86a11;
+  background-color: #fbfbfb;
+}
+
+.select-box__input {
+  display: block; /* IMPORTANTE PER NASCONDERE GLI INPUT RADIO*/ 
+}
+
+.select-box__input:checked + .select-box__input-text {
+  display: block;
+  opacity: 1;
+}
+
+.select-box__input-text {
+  display: none;
+  opacity: 1;
+}
+
+.select-box__current:focus + .select-box__list {
+  opacity: 1;
+  float: left;
+  width: 100%;
+  overflow: auto;
+  height: 400%;
+}
+.select-box__current:focus + .select-box__list .select-box__option {
+  cursor: pointer;
+}
