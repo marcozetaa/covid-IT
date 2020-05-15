@@ -274,9 +274,7 @@ tbody td {
 
 /* Stile per lista regioni */
 
-#lista-regioni ul, li{
-  list-style-type: none;
-}
+.selected {border: 1px solid red;}
 
 .select-box__option {
   display: block;

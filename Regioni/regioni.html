@@ -9,6 +9,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script type="text/javascript" src="../Vue/vue.min.js"></script>
+    <script type="text/javascript" src="regioniScriptQuery.js"></script>
 </head>
 <body>
     <div class="header">
@@ -123,100 +124,22 @@
             </div>
         </div>
         <div class="rightcolumn">
-            <div class="card">
-                <!--<h2>LISTA REGIONI</h2>
-                <div class="select-box">
-                    <div class="select-box__current" tabindex="1">-->
-                      <!--
-                        <input class="select-box__input" type="radio" id="0" value="1" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="0" aria-hidden="aria-hidden">Abruzzo</label>
-                      -->
-                        
-                        <!--<a class="select-box__input select-box__option" href="?regione=0">Abruzzo</a>
-                      
-
-                        <input class="select-box__input" type="radio" id="1" value="2" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="1" aria-hidden="aria-hidden">Basilicata</label>
-                  
-                      
-                        <input class="select-box__input" type="radio" id="2" value="3" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="2" aria-hidden="aria-hidden">Calabria</label>
-                      
-                     
-                        <input class="select-box__input" type="radio" id="3" value="4" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="3" aria-hidden="aria-hidden">Campania</label>
-                      
-                      
-                        <input class="select-box__input" type="radio" id="4" value="5" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="4" aria-hidden="aria-hidden">Emilia Romagna</label>
-                      
-                      
-                        <input class="select-box__input" type="radio" id="5" value="6" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="5" aria-hidden="aria-hidden">Friuli-Venezia Giulia</label>
-                      
-                      
-                        <input class="select-box__input" type="radio" id="6" value="7" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="6" aria-hidden="aria-hidden">Lazio</label>
-                      
-                      
-                        <input class="select-box__input" type="radio" id="7" value="8" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="7" aria-hidden="aria-hidden">Liguria</label>
-                      
-                      
-                        <input class="select-box__input" type="radio" id="8" value="9" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="8" aria-hidden="aria-hidden">Lombardia</label>
-                      
-                      
-                        <input class="select-box__input" type="radio" id="9" value="10" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="9" aria-hidden="aria-hidden">Marche</label>
-                      
-                        <input class="select-box__input" type="radio" id="10" value="11" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="10" aria-hidden="aria-hidden">Molise</label>
-                      
-                      
-                        <input class="select-box__input" type="radio" id="11" value="12" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="11" aria-hidden="aria-hidden">Piemonte</label>
-                      
-                      
-                        <input class="select-box__input" type="radio" id="12" value="13" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="12" aria-hidden="aria-hidden">Puglia</label>
-                    
-
-                        <input class="select-box__input" type="radio" id="13" value="14" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="13" aria-hidden="aria-hidden">Sardegna</label>
-                      
-                      
-                        <input class="select-box__input" type="radio" id="14" value="15" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="14" aria-hidden="aria-hidden">Sicilia</label>
-                      
-                      
-                        <input class="select-box__input" type="radio" id="15" value="16" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="15" aria-hidden="aria-hidden">Trentino-Alto Adige</label>
-                      
-                      
-                        <input class="select-box__input" type="radio" id="16" value="17" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="16" aria-hidden="aria-hidden">Toscana</label>
-                      
-                      
-                        <input class="select-box__input" type="radio" id="17" value="18" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="17" aria-hidden="aria-hidden">Umbria</label>
-                      
-                      
-                        <input class="select-box__input" type="radio" id="18" value="19" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="18" aria-hidden="aria-hidden">Veneto</label>
-                     
-                    
-                        <input class="select-box__input" type="radio" id="19" value="20" name="Regioni" checked="checked"/>
-                        <label class="select-box__option" for="19" aria-hidden="aria-hidden">Valle d'Aosta</label>
-                </div>
-                </div>-->
+          <div class="card">
+            <h2>LISTA REGIONI</h2>
+            <div class="select-box">
+              <div v-for="(x,index) in regioni" class="select-box__current" >
+                <label class="select-box__option" for="index" v-on:click="showRegione(index)">
+                  {{x.nomeRegione}}
+                </label>
+              </div>
             </div>
+          </div>
         </div>
         </div>
 
         <div class="footer">
             <h2>Footer</h2>
         </div>
-    <script type="text/javascript" src="regioniScript.js"></script>
+    <script type="text/javascript" src="regioniScriptVue.js"></script>
 </body>
 </html>
