@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;;
   }
 
 
@@ -76,26 +76,28 @@ body {
 
 .andamento{
   background-color: #f1f1f1;
-padding: ;
+padding: 10px;
 text-align: center;
-font-size: 35px;
+font-size: 20px;
 }
 
-
+*{
+  box-sizing: border-box;
+}
 /* Create three unequal columns that floats next to each other */
 .column {
   float: left;
-  padding: 20px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  padding: 10px;
+  height: 300px; 
 }
 
 /* Left and right column */
-.column.side {
+.left, .right {
   width: 25%;
 }
 
 /* Middle column */
-.column.middle {
+.middle {
   width: 50%;
 }
 
@@ -104,4 +106,24 @@ font-size: 35px;
   content: "";
   display: table;
   clear: both;
+}
+
+.lista{
+  list-style-type: disc;
+}
+
+#casitot{
+  color: blue;
+}
+
+#guariti{
+  color: green;
+}
+
+#deceduti{ 
+  color: red;
+}
+
+#casiatt{
+  color: yellow;
 }
