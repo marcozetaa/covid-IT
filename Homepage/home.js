@@ -39,8 +39,6 @@ var italia = new Vue({
 
         varPositivi: function(){
             var pos = this.italia.variazione_totale_positivi;
-            if (pos > 0) $('#variazione').css('color','red');
-            else $('#variazione').css('color','green');
             return pos;
         },
 
@@ -66,6 +64,12 @@ var italia = new Vue({
 
         casiTestati: function(){
             return this.italia.casi_testati;
+        },
+
+        computeColor: function(){
+            var pos = this.italia.variazione_totale_positivi;
+            if( pos > 0) return 'red';
+            else return 'green';
         }
 
     },
