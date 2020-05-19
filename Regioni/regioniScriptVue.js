@@ -4,6 +4,7 @@ var regione = new Vue({
         return{
             loading: true,
             errored: false,
+            show: true,
             regioneSelezionata: 0,
             regioni: [],
             immagini: [
@@ -33,8 +34,12 @@ var regione = new Vue({
     },
     methods: {
         showRegione: function(i){
-            this.regioneSelezionata=i;
-        }
+            this.loading=true;
+            setTimeout(() => {
+                this.regioneSelezionata=i;
+                this.loading=false;
+            }, 1500);
+        },
     },
     computed: {
         nomeRegione: function(){
@@ -65,8 +70,6 @@ var regione = new Vue({
         },
         variazioneTotalePositivi: function(){
             var info = this.regioni[this.regioneSelezionata].variazione_totale_positivi;
-            if (info > 0) $('#variazione').css('color','red');
-            else $('#variazione').css('color','green');
             return info;
         },
         nuoviPositivi: function(){
@@ -95,6 +98,11 @@ var regione = new Vue({
         },
         image: function(){
             return this.immagini[this.regioneSelezionata].image;
+        },
+        computeColor: function(){
+            var info = this.regioni[this.regioneSelezionata].variazione_totale_positivi;
+            if( info > 0) return 'red';
+            else return 'green';
         }
     },
     mounted () {

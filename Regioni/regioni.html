@@ -16,7 +16,7 @@
   <p>Resize the browser window to see the effect.</p>
   </div>
 
-  <div class="topnav">
+  <div class="topnav navbar">
       <a href="#">Logo</a>
       <a href="#" style="float:right;">Live</a>        
       <a href="#" style="float:right; border-left: 1px white;">Log in</a>
@@ -24,83 +24,86 @@
   </div>
 
   <div id="component-regione" class="row">
-    <section v-if="errored">
-      <p>C'è un problema nel ricevere i dati in qeusto momento, ci scusiamo per il disagio</p>
-      <img v-bind:src="image"></img>
-    </section>
-    <section v-else>
-    <div v-if="loading" class="lds-grid">Loading...</div>
-    <div v-else class="leftcolumn">
-      <div class="card">
-        <h2>{{ nomeRegione }}</h2>
-        <h5>Ultimo aggiornamento : {{ data }}</h5>
+    <transition name="fade">
+      <section key="1" v-if="errored">
+        <p>C'è un problema nel ricevere i dati in qeusto momento, ci scusiamo per il disagio</p>
         <img v-bind:src="image"></img>
-        <div class="container">
-          <div class="row">
-            <table>
-              <thead>
-                <tr class="pricing-top-heading">
-                  <th class="free">TOTALE CASI</th>
-                  <th class="basic">TOTALE POSITIVI</th>
-                  <th class="pro">DECEDUTI</th>
-                </tr>
-                <tr class="pricing-bottom-heading small">
-                  <th class="free"><strong>{{totaleCasi}}</strong>
-                    </th>
-                  <th class="basic"><strong>{{totalePositivi}} <div id='variazione'>({{variazioneTotalePositivi}})</div></th>
-                  <th class="pro"><strong>{{totaleDeceduti}}</strong>
-                    </th>
-                </tr>
-              </thead>
-              <!-- TABELLA DATI -->
-              <tbody>
-                <tr>
-                  <td class="collapsible-section-header" colspan="3">
-                    <a data-toggle="collapse" >Monitoraggio Sanitario</a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="no-padding" colspan="3">
-                    <div id="collapse_section_one" class="collapse in">
-                      <table style="width:100%">
-                        <tr>
-                          <td>Isolamento domiciliare</td>
-                          <td>{{ isolamentoDomiciliare }}</td>
-                        </tr>
-                        <tr>
-                          <td>Totale ospedalizzati</td>
-                          <td>{{ totaleOspedalizzati }}</td>
-                        </tr>
-                        <tr>
-                          <td>Ricoverati con sintomi</td>
-                          <td>{{ ricoveratiConSintomi }}</td>
-                        </tr>
-                        <tr>
-                          <td>Terapia intensiva</td>
-                          <td>{{ terapiaIntensiva }}</td>
-                        </tr>
-                        <tr>
-                          <td>Dimessi guariti</td>
-                          <td>{{ dimessiGuariti }}</td>
-                        </tr>
-                        <tr>
-                          <td>Tamponi</td>
-                          <td>{{ totaleTamponi }}</td>
-                        </tr>
-                        <tr>
-                          <td>Note</td>
-                          <td>{{ noteIT }}</td>
-                        </tr>
-                      </table>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+      </section>
+      <div key="2" v-else-if="loading"  class="lds-ripple">
+        <div></div><div></div>
+      </div>
+      <div key="3" v-else class="leftcolumn">
+        <div id="dataoutput" class="card">
+          <h2>{{ nomeRegione }}</h2>
+          <h5>Ultimo aggiornamento : {{ data }}</h5>
+          <img v-bind:src="image"></img>
+          <div class="container">
+            <div class="row">
+              <table>
+                <thead>
+                  <tr class="pricing-top-heading">
+                    <th class="free">TOTALE CASI</th>
+                    <th class="basic">TOTALE POSITIVI</th>
+                    <th class="pro">DECEDUTI</th>
+                  </tr>
+                  <tr class="pricing-bottom-heading small">
+                    <th class="free"><strong>{{totaleCasi}}</strong>
+                      </th>
+                    <th class="basic"><strong>{{totalePositivi}} <div id='variazione' v-bind:style="{color: computeColor}">({{variazioneTotalePositivi}})</div></th>
+                    <th class="pro"><strong>{{totaleDeceduti}}</strong>
+                      </th>
+                  </tr>
+                </thead>
+                <!-- TABELLA DATI -->
+                <tbody>
+                  <tr>
+                    <td class="collapsible-section-header" colspan="3">
+                      <a data-toggle="collapse" >Monitoraggio Sanitario</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="no-padding" colspan="3">
+                      <div id="collapse_section_one" class="collapse in">
+                        <table style="width:100%">
+                          <tr>
+                            <td>Isolamento domiciliare</td>
+                            <td>{{ isolamentoDomiciliare }}</td>
+                          </tr>
+                          <tr>
+                            <td>Totale ospedalizzati</td>
+                            <td>{{ totaleOspedalizzati }}</td>
+                          </tr>
+                          <tr>
+                            <td>Ricoverati con sintomi</td>
+                            <td>{{ ricoveratiConSintomi }}</td>
+                          </tr>
+                          <tr>
+                            <td>Terapia intensiva</td>
+                            <td>{{ terapiaIntensiva }}</td>
+                          </tr>
+                          <tr>
+                            <td>Dimessi guariti</td>
+                            <td>{{ dimessiGuariti }}</td>
+                          </tr>
+                          <tr>
+                            <td>Tamponi</td>
+                            <td>{{ totaleTamponi }}</td>
+                          </tr>
+                          <tr>
+                            <td>Note</td>
+                            <td>{{ noteIT }}</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </transition>
     <div class="rightcolumn">
       <div class="card">
         <h2>LISTA REGIONI</h2>
