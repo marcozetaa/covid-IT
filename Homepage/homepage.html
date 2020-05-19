@@ -5,6 +5,7 @@
     <link href="stile.css" rel="stylesheet"/>
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="../Vue/vue.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--Link per la mappa -->
@@ -47,15 +48,23 @@
       </div>
     </div>
     <!--LAYOUT-->
-    <div class="andamento">update ore:</div>
+    <div class="andamento">Ultimo aggiornamento {{ data }}</div>
     <div class="row">
       <div class="column left" style="background-color:#aaa;">
       <h3>Andamento</h3>
       <ul class="lista">
-        <li id="casitot">Casi totali</li>
-        <li id="guariti">Guariti</li>
-        <li id="deceduti">Deceduti</li>
-        <li id="casiatt">Casi attivi</li>
+        <li id="ricoverati">Ricoverati con sintomi {{ ricoveratiConSintomi }}</li>
+        <li id="terapiaInt">Terapia intensiva {{ terapiaIntensiva }}</li>
+        <li id="ospedalizzati">Totale ospedalizzati {{ totaleOspedalizzati }}</li>
+        <li id="isolamento">Isolamento domiciliare {{ isolamentoDomiciliare }}</li>
+        <li id="positivitot">Totale positivi {{ totalePositivi }}</li>
+        <li id="variazione">Variazione totale positivi {{ varPositivi }}</li>
+        <li id="nuovipos">Nuovi positivi {{ nuoviPositivi }}</li>
+        <li id="guariti">Guariti  {{ dimessiGuariti }}</li>
+        <li id="deceduti">Deceduti {{ deceduti }}</li>
+        <li id="casitot">Casi totali {{ totaleCasi }}</li>
+        <li id="tamponi">Tamponi {{ tamponi }}</li>
+        <li id="casitestati">Casi testati {{ casiTestati }}</li>
       </ul>
       </div>
       <div id='centro' class="column middle"></div>
