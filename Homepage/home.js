@@ -1,6 +1,81 @@
-var home=new Vue({
-    el : '#centro',
-    data : {
-        image: 'MappaItalia/mappa-italia.png'
+var italia = new Vue({
+    el: '#centro',
+    data: function(){
+        return{
+            loading: true,
+            error: false,
+            italia: [],
+            image: './mappa-italia.png'
+
+        };
+    },
+
+    computed: {
+        data: function(){
+            var data = this.italia.data;
+            var res = data.split("T"); 
+            return res[0] + ' - ' + res[1];
+        },
+
+        ricoveratiConSintomi: function(){
+            return this.italia.ricoverati_con_sintomi;
+        },
+
+        terapiaIntensiva: function(){
+            return this.italia.terapia_intensiva;
+        },
+
+        totaleOspedalizzati: function(){
+            return this.italia.totale_ospedalizzati;
+        },
+
+        isolamentoDomiciliare: function(){
+            return this.italia.isolamento_domiciliare;
+        },
+
+        totalePositivi: function(){
+            return this.italia.totale_positivi;
+        },
+
+        varPositivi: function(){
+            var pos = this.italia.variazione_totale_positivi;
+            if (pos > 0) $('#variazione').css('color','red');
+            else $('#variazione').css('color','green');
+            return pos;
+        },
+
+        nuoviPositivi: function(){
+            return this.italia.nuovi_positivi;
+        },
+
+        dimessiGuariti: function(){
+            return this.italia.dimessi_guariti;
+        },
+
+        deceduti: function(){
+            return this.italia.deceduti;
+        },
+
+        totaleCasi: function(){
+            return this.italia.totale_casi;
+        },
+        
+        tamponi: function(){
+            return this.italia.tamponi;
+        },
+
+        casiTestati: function(){
+            return this.italia.casi_testati;
+        }
+
+    },
+    mounted () {
+        axios.get('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json')
+        .then(response => {this.italia = response.data})
+        .catch(error => {
+            console.log(error)
+            this.errored=true;
+        })
+        .finally(() => this.loading=false);
     }
 });
