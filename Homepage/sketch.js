@@ -11,7 +11,7 @@ var long = 16.86736689;
 var zoom = 4.95;
 
 function preload(){
-    mapimg = loadImage('https://api.mapbox.com/styles/v1/mapbox/light-v10/static/12.6399,41.9509,4.95,0/570x675?access_token=pk.eyJ1IjoibWFyY296ZXRhIiwiYSI6ImNrYWR3YWM3YjFwd2wzMnM5ZDkzOWtvMnUifQ.6DYMJ2GpntTFCplg0tBkCQ');
+    mapimg = loadImage('MappaItalia/Italia.png');
     mapdata = loadJSON('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni-latest.json');
 }
 
@@ -55,7 +55,7 @@ function setup(){
         var y = mercatoreY(lat) - cy;
         
         stroke(255,0,255);
-        fill(255,0,255,200);
+        fill(255, 204, 100);
         ellipse(x,y,positivi,positivi);    
     }
 }

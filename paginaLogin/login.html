@@ -27,7 +27,7 @@
                 </div>
                                     
                 <div class="white-panel">
-                    <div class="login-show">
+                    <div id="form-login" class="login-show">
                         <h2>LOGIN</h2>
                         <input type="text" placeholder="Email">
                         <input type="password" placeholder="Password">
@@ -35,90 +35,91 @@
                         <a href="">Password dimenticata?</a>
                     </div>
                     <div class="register-show">
+                      <form id="form-register" action="validateRegistration.php" method="POST" name="form-register" onsubmit="return validaRegistrazione()">
                         <h2>REGISTER</h2>
-                        <input type="text" placeholder="Nome" required>
-                        <input type="text" placeholder="Cognome" required>
-                        <input type="email" placeholder="Email">
+                        <input name="input_nome" type="text" placeholder="Nome" required>
+                        <input name="input_cognome"type="text" placeholder="Cognome" required>
+                        <input name="input_email" type="email" placeholder="Email" required>
                         <div class="select-box">
-                            <div class="select-box__current" tabindex="1">
+                            <div id="select_current" class="select-box__current" tabindex="1">
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="0" value="1" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="0" value="Abruzzo" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Abruzzo</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="1" value="2" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="1" value="Basilicata" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Basilicata</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="2" value="3" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="2" value="Calabria" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Calabria</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="3" value="4" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="3" value="Campania" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Campania</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="4" value="5" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="4" value="Emilia Romagna" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Emilia Romagna</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="5" value="6" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="5" value="Friuli-Venezia Giulia" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Friuli-Venezia Giulia</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="6" value="7" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="6" value="Lazio" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Lazio</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="7" value="8" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="7" value="Liguria" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Liguria</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="8" value="9" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="8" value="Lombardia" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Lombardia</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="9" value="10" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="9" value="Marche" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Marche</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="10" value="11" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="10" value="Molise" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Molise</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="11" value="12" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="11" value="Piemonte" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Piemonte</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="12" value="13" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="12" value="Puglia" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Puglia</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="13" value="14" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="13" value="Sardegna" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Sardegna</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="14" value="15" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="14" value="Sicilia" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Sicilia</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="15" value="16" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="15" value="Trentino-Alto Adige" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Trentino-Alto Adige</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="16" value="17" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="16" value="Toscana" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Toscana</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="17" value="18" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="17" value="Umbria" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Umbria</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="18" value="19" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="18" value="Veneto" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Veneto</p>
                               </div>
                               <div class="select-box__value">
-                                <input class="select-box__input" type="radio" id="19" value="20" name="Regioni" checked="checked"/>
+                                <input class="select-box__input" type="radio" id="19" value="Valle d'Aosta" name="input_regioni" checked="checked"/>
                                 <p class="select-box__input-text">Valle d'Aosta</p>
                               </div><img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true"/>
                             </div>
@@ -185,9 +186,10 @@
                               </li>
                             </ul>
                         </div>
-                        <input type="password" placeholder="Password">
-                        <input type="password" placeholder="Confirm Password">
+                        <input name="first_pass" id="first_pass" type="password" placeholder="Password" required>
+                        <input name="confirm_pass" id="confirm_pass" type="password" placeholder="Confirm Password" required>
                         <button class="reg-btn-show" name="RegisterButton" type="submit">Register</button>
+                      </form>
                     </div>
                 </div>
             </div>

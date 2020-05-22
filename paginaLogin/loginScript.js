@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
     $('.login-info-box').fadeOut();
     $('.login-show').addClass('show-log-panel');
@@ -30,5 +29,23 @@ $(document).ready(function(){
     $('#regioni > option').each(function(){
         $(this).addClass('select-items');
     });
+
+    $('#first_pass, #confirm_pass').on('keyup', function(){
+        var pass1 = $('#first_pass').val();
+        var pass2 = $('#confirm_pass').val();
+        if(pass1 == pass2){
+            $('.register-show input[type="password"]').css('border', '1px solid green');
+            $('.register-show input[type="password"]').css('border', '1px solid green');
+        }
+        else{
+            $('.register-show input[type="password"]').css('border', '1px solid red');
+            $('.register-show input[type="password"]').css('border', '1px solid red');
+        }
+    }); 
 });
+
+function validaRegistrazione(){
+    var info =$("input[name='Regioni']:checked").val();
+    console.log('Selezionato '+ info);
+};
     
