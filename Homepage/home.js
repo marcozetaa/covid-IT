@@ -1,27 +1,27 @@
 var italia = new Vue({
-    el: '#centro',
+    el: '#tutto',
     data: function(){
         return{
             loading: true,
             error: false,
-            italia: [],
-            image: './mappa-italia.png'
-
+            italia: []
         };
     },
 
     computed: {
-        data: function(){
+        /*data: function(){
             var data = this.italia.data;
             var res = data.split("T"); 
             return res[0] + ' - ' + res[1];
-        },
+        },*/
 
         ricoveratiConSintomi: function(){
+            console.log("RCS= " + this.italia.ricoverati_con_sintomi)
             return this.italia.ricoverati_con_sintomi;
         },
 
         terapiaIntensiva: function(){
+            console.log("TI= " + this.italia.terapia_intensiva)
             return this.italia.terapia_intensiva;
         },
 
@@ -75,11 +75,14 @@ var italia = new Vue({
     },
     mounted () {
         axios.get('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json')
-        .then(response => {this.italia = response.data})
+        .then(response => {this.italia = response.data[0]})
         .catch(error => {
             console.log(error)
             this.errored=true;
         })
-        .finally(() => this.loading=false);
+        .finally(() => {
+            //console.log(this.italia)
+            this.loading=false
+        });
     }
 });

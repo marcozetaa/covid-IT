@@ -49,11 +49,11 @@
     </div>
     <!--LAYOUT-->
     <div class="andamento">Ultimo aggiornamento {{ data }}</div>
-    <div class="row">
+    <div id="tutto" class="row">
       <div class="column left" style="background-color:#aaa;">
       <h3>Andamento</h3>
       <ul class="lista">
-        <li id="ricoverati">Ricoverati con sintomi {{ ricoveratiConSintomi }}</li>
+        <li id="ricoverati">Ricoverati con sintomi {{ italia.ricoverati_con_sintomi }}</li>
         <li id="terapiaInt">Terapia intensiva {{ terapiaIntensiva }}</li>
         <li id="ospedalizzati">Totale ospedalizzati {{ totaleOspedalizzati }}</li>
         <li id="isolamento">Isolamento domiciliare {{ isolamentoDomiciliare }}</li>
@@ -68,13 +68,16 @@
       </ul>
       </div>
       <!--Mappa centrale monitoraggio-->
-      <div id='centro' class="column middle"></div>
-      <div class="column right" style="background-color:#ccc;">
-      <h2>Colonna destra</h2>
-      <p>cazzi vari</p>
+      <div class="column middle"></div>
+      <div id="graf" class="column right" style="background-color:#ccc;">
+          <!--<canvas id="myChartD" class="column right">{{ trendDeceduti }}</canvas>
+          <canvas id="myChartP">{{ trendPositivi }}</canvas>
+          <canvas id="myChartG">{{ trendGuariti }}</canvas>-->
       </div>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
    <script type="text/javascript" src="home.js"></script>
    <script type="text/javascript" src="sketch.js"></script>
+   <script type="text/javascript" src="grafico.js"></script>
   </body>
 </html>
