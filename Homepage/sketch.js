@@ -48,8 +48,6 @@ function setup(){
         var lat = mapdata[i].lat;
         var long = mapdata[i].long;
         var positivi = sqrt(mapdata[i].totale_positivi)/1.5;
-        console.log("Nome: "+mapdata[i].denominazione_regione+" Effettivi positivi: "+ mapdata[i].totale_positivi, "raggio: " + positivi);
-
 
         var x = mercatoreX(long) - cx;
         var y = mercatoreY(lat) - cy;

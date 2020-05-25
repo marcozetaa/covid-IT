@@ -10,16 +10,13 @@ var myGraf= new Vue({
                 myGuariti: []
             };
         },
-
-        methods: {
-            doGraph: function(result,ctx){
-                
+    methods: {
+            doGraph: function(result,ctx){                
                 var myChart = new Chart(ctx, {
                     type: 'line',
                     data: {
                         labels: this.myLabel,
-                        datasets: [{
-                            
+                        datasets: [{            
                             data: result,
                             backgroundColor: [
                                 'rgba(255, 99, 132, 0.2)'
@@ -47,8 +44,6 @@ var myGraf= new Vue({
                 });  
             },
         },
-    
-
     computed : {
         trendDeceduti: function(){
             var tx= "Deceduti";
@@ -61,23 +56,21 @@ var myGraf= new Vue({
             var ctx = document.getElementById('myChartP').getContext('2d');
             this.doGraph(this.myPositivi,ctx);
         },              
-
         trendGuariti: function(){
             var tx="Guariti";
             var ctx = document.getElementById('myChartG').getContext('2d');
             this.doGraph(this.myGuariti,ctx);
         }
     },
-
     mounted () {
         axios.get('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json')
         .then(response => {
             let dati=response.data;
             for(var i=0; i<dati.length; i++){
-                this.myDeceduti.push(dati[i].deceduti)
-                this.myLabel.push(dati[i].data)
-                this.myPositivi.push(dati[i].totale_positivi)
-                this.myGuariti.push(dati[i].dimessi_guariti)
+                this.myDeceduti.push(dati[i].deceduti);
+                this.myLabel.push(dati[i].data);
+                this.myPositivi.push(dati[i].totale_positivi);
+                this.myGuariti.push(dati[i].dimessi_guariti);
             }
         })
         .catch(error => {
@@ -85,7 +78,7 @@ var myGraf= new Vue({
             this.errored=true;
         })
         .finally(() => {
-            this.loading=false
+            this.loading=false;
         });
     }
 });

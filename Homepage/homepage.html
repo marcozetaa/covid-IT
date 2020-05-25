@@ -5,8 +5,9 @@
     <link href="stile.css" rel="stylesheet"/>
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-    <script type="text/javascript" src="../Vue/vue.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
     <!--Link per la mappa -->
     <script type="text/javascript" src="../p5/p5.min.js"></script>
@@ -48,8 +49,7 @@
       </div>
     </div>
     <!--LAYOUT-->
-    <div class="andamento">Ultimo aggiornamento {{ data }}</div>
-    <div id="tutto" class="row">
+    <div id="ultimi_dati">
       <div class="column left" style="background-color:#aaa;">
       <h3>Andamento</h3>
       <ul class="lista">
@@ -57,8 +57,7 @@
         <li id="terapiaInt">Terapia intensiva {{ terapiaIntensiva }}</li>
         <li id="ospedalizzati">Totale ospedalizzati {{ totaleOspedalizzati }}</li>
         <li id="isolamento">Isolamento domiciliare {{ isolamentoDomiciliare }}</li>
-        <li id="positivitot">Totale positivi {{ totalePositivi }}</li>
-        <li id="variazione">Variazione totale positivi {{ varPositivi }}</li>
+        <li id="positivitot">Totale positivi {{ totalePositivi }} ({{ varPositivi }}) </li>
         <li id="nuovipos">Nuovi positivi {{ nuoviPositivi }}</li>
         <li id="guariti">Guariti  {{ dimessiGuariti }}</li>
         <li id="deceduti">Deceduti {{ deceduti }}</li>
@@ -68,16 +67,26 @@
       </ul>
       </div>
       <!--Mappa centrale monitoraggio-->
-      <div class="column middle"></div>
-      <div id="graf" class="column right" style="background-color:#ccc;">
-          <!--<canvas id="myChartD" class="column right">{{ trendDeceduti }}</canvas>
-          <canvas id="myChartP">{{ trendPositivi }}</canvas>
-          <canvas id="myChartG">{{ trendGuariti }}</canvas>-->
+      <div id="centro" class="column middle">
+        <h2 class="andamento">Ultimo aggiornamento: {{ data }}</h2>
       </div>
-    </div>
+    </div>  
+      <div id="graf" class="column right" style="background-color:#ccc;">
+        <canvas id="myChartD" width='100%'>{{ trendDeceduti }}</canvas>
+        <canvas id="myChartP">{{ trendPositivi }}</canvas>
+        <canvas id="myChartG">{{ trendGuariti }}</canvas>
+      </div>
+    
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
    <script type="text/javascript" src="home.js"></script>
    <script type="text/javascript" src="sketch.js"></script>
    <script type="text/javascript" src="grafico.js"></script>
   </body>
 </html>
+ <!--
+         <div id="graf" class="column right" style="background-color:#ccc;">
+          <canvas id="myChartD" class="column right">{{ trendDeceduti }}</canvas>
+          <canvas id="myChartP">{{ trendPositivi }}</canvas>
+          <canvas id="myChartG">{{ trendGuariti }}</canvas>
+        </div>
+ -->

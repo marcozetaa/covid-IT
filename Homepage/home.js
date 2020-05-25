@@ -1,5 +1,5 @@
 var italia = new Vue({
-    el: '#tutto',
+    el: '#ultimi_dati',
     data: function(){
         return{
             loading: true,
@@ -9,19 +9,18 @@ var italia = new Vue({
     },
 
     computed: {
-        /*data: function(){
+        data: function(){
             var data = this.italia.data;
-            var res = data.split("T"); 
-            return res[0] + ' - ' + res[1];
-        },*/
+            var res = data.split("T");
+            var giorno = res[0].split("-");
+            return giorno[2] + "-" + giorno[1] + "-" + giorno[0] + " alle "  + res[1];
+        },
 
         ricoveratiConSintomi: function(){
-            console.log("RCS= " + this.italia.ricoverati_con_sintomi)
             return this.italia.ricoverati_con_sintomi;
         },
 
         terapiaIntensiva: function(){
-            console.log("TI= " + this.italia.terapia_intensiva)
             return this.italia.terapia_intensiva;
         },
 
@@ -81,7 +80,6 @@ var italia = new Vue({
             this.errored=true;
         })
         .finally(() => {
-            //console.log(this.italia)
             this.loading=false
         });
     }

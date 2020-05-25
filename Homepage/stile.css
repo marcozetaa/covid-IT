@@ -77,7 +77,7 @@ body {
 .andamento{
   background-color: #f1f1f1;
   text-align: center;
-  font-size: 35px;
+  font-size: 25px;
 }
 
 *{
@@ -87,17 +87,21 @@ body {
 .column {
   float: left;
   padding: 10px;
-  height: 300px; 
+  height: 500000px; 
 }
 
 /* Left and right column */
-.left, .right {
-  width: 25%;
+.left {
+  width: 20%;
+}
+
+.right {
+  width: 35%;
 }
 
 /* Middle column */
 .middle {
-  width: 50%;
+  width: 45%;
 }
 
 /* Clear floats after the columns */

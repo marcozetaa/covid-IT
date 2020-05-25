@@ -70,6 +70,7 @@ var regione = new Vue({
         },
         variazioneTotalePositivi: function(){
             var info = this.regioni[this.regioneSelezionata].variazione_totale_positivi;
+            if(info > 0) info = "+" + info;
             return info;
         },
         nuoviPositivi: function(){
