@@ -9,8 +9,7 @@ body {
 
   .navbar {
     overflow: hidden;
-    background-color: #333;
- 
+    background-color: #333; 
   }
 
  .navbar-right{
@@ -87,7 +86,7 @@ body {
 .column {
   float: left;
   padding: 10px;
-  height: 500000px; 
+  height: 100%; 
 }
 
 /* Left and right column */
@@ -129,4 +128,87 @@ body {
 
 #casiatt{
   color: yellow;
+}
+
+/*Stile per il pannello sinistro*/
+.infoTile {
+  border-bottom: #DDD 1px solid;
+  color: #333;
+}
+
+.infoTileHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.infoTile .title {
+  margin-bottom: 0px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.infoTile .lastUpdate {
+  font-size: 13px;
+  color: #767676;
+  line-height: 20px;
+  padding-bottom: 12px;
+}
+
+.infoTile .confirmed {
+  font-size: 32px;
+  color: #DE3700;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.infoTileData {
+  padding-bottom: 20px;
+}
+
+.legend:first-child {
+  padding-top: 12px;
+}
+
+.legend {
+  padding-top: 16px;
+}
+
+.legend {
+  display: grid;
+  padding-top: 16px;
+  grid-template-columns: 8px auto min-content;
+  align-items: center;
+  grid-gap: 16px 8px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.legend .color {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+}
+
+.legend .description {
+  font-weight: 600;
+}
+
+.legend .total {
+  color: #767676;
+  display: flex;
+  align-items: center;
+}
+
+[dir="ltr"] .legend .delta {
+  margin-left: 8px;
+}
+
+.legend .delta {
+  text-align: right;
+  font-size: 11px;
+  line-height: 15px;
+  background-color: #F5F5F5;
+  border-radius: 2px;
+  padding: 1px 4px 2px 4px;
+  font-weight: 600;
 }

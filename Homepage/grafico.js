@@ -68,7 +68,9 @@ var myGraf= new Vue({
             let dati=response.data;
             for(var i=0; i<dati.length; i++){
                 this.myDeceduti.push(dati[i].deceduti);
-                this.myLabel.push(dati[i].data);
+                var res = dati[i].data.split("T");
+                var giorno = res[0].split("-");    
+                this.myLabel.push(giorno[2]+"-"+giorno[1]+"-"+giorno[0].substring(2,4));
                 this.myPositivi.push(dati[i].totale_positivi);
                 this.myGuariti.push(dati[i].dimessi_guariti);
             }

@@ -9,11 +9,18 @@ var italia = new Vue({
     },
 
     computed: {
-        data: function(){
-            var data = this.italia.data;
+        giorno: function() {
+            var data = this.italia.data + '';
             var res = data.split("T");
             var giorno = res[0].split("-");
-            return giorno[2] + "-" + giorno[1] + "-" + giorno[0] + " alle "  + res[1];
+            return giorno[2] + "-" + giorno[1] + "-" + giorno[0];
+        },
+        
+        ora: function() {
+            var data = this.italia.data+'';
+            var res = data.split("T");
+            console.log("ora: "+ res[1]);
+            return res[1];
         },
 
         ricoveratiConSintomi: function(){
