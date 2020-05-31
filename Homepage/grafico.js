@@ -7,27 +7,28 @@ var myGraf= new Vue({
                 myLabel: [],
                 myDeceduti: [],
                 myPositivi: [],
-                myGuariti: []
+                myGuariti: [],
+                graph_attribute: [
+                    {id: 0, txt:"Deceduti", borderColor:'rgba(255, 99, 132, 1)', backgroundColor:'rgba(255, 99, 132, 0.2)'},
+                    {id: 1, txt:"Positivi", borderColor:'rgba(54, 162, 235, 1)', backgroundColor:'rgba(255, 99, 132, 0.2)'},
+                    {id: 2, txt:"Guariti", borderColor:'rgba(255, 206, 86, 1)', backgroundColor:'rgba(255, 99, 132, 0.2)'},
+                ]
             };
         },
     methods: {
-            doGraph: function(result,ctx){                
+            doGraph: function(result,ctx,index){                
                 var myChart = new Chart(ctx, {
                     type: 'line',
                     data: {
                         labels: this.myLabel,
-                        datasets: [{            
+                        datasets: [{     
+                            label: this.graph_attribute[index].txt,       
                             data: result,
                             backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)'
+                                this.graph_attribute[index].backgroundColor
                             ],
                             borderColor: [
-                                'rgba(255, 99, 132, 1)',
-                                'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
-                                'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
+                                this.graph_attribute[index].borderColor
                             ],
                             borderWidth: 4
                         }]
@@ -48,18 +49,18 @@ var myGraf= new Vue({
         trendDeceduti: function(){
             var tx= "Deceduti";
             var ctx = document.getElementById('myChartD').getContext('2d');
-            this.doGraph(this.myDeceduti,ctx);
+            this.doGraph(this.myDeceduti,ctx,0);
         },
 
         trendPositivi: function(){
             var tx="Positivi";
             var ctx = document.getElementById('myChartP').getContext('2d');
-            this.doGraph(this.myPositivi,ctx);
+            this.doGraph(this.myPositivi,ctx,1);
         },              
         trendGuariti: function(){
             var tx="Guariti";
             var ctx = document.getElementById('myChartG').getContext('2d');
-            this.doGraph(this.myGuariti,ctx);
+            this.doGraph(this.myGuariti,ctx,2);
         }
     },
     mounted () {

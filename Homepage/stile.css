@@ -83,6 +83,7 @@ body {
   box-sizing: border-box;
 }
 /* Create three unequal columns that floats next to each other */
+
 .column {
   float: left;
   padding: 10px;
@@ -151,7 +152,6 @@ body {
   font-size: 13px;
   color: #767676;
   line-height: 20px;
-  padding-bottom: 12px;
 }
 
 .infoTile .confirmed {
@@ -162,7 +162,7 @@ body {
 }
 
 .infoTileData {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .infoTile .moreinfo{
@@ -218,9 +218,53 @@ body {
   font-weight: 600;
 }
 
-.areaDiv {
-  background-color: lightblue;
-  width: 100%;
-  height: 110px;
-  overflow: auto;
+.listaRegioni {
+  width: 80%;
+  height: 50%;
+}
+
+/* width */
+.listaRegioni ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.listaRegioni ::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.listaRegioni ::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.listaRegioni ::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.area {
+  display: block;
+  position: relative;
+  background: #FFF;
+  border: 1px solid #00809D;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 10px 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.area:hover{
+  box-shadow: 0px 3px 5px rgb(0, 100, 122);
+}
+
+.area .nome{
+  text-align: left;;
+}
+
+.area .total{
+  text-align: center;
 }

@@ -19,34 +19,11 @@
       <div class="navbar-right">
         <div class="dropdown">
           <a href="../Regioni/regioni.html" >Regioni</a>
-          <!--<div class="dropdown-content">
-            <a href="#">Abruzzo</a>
-            <a href="#">Basilicata</a>
-            <a href="#">Calabria</a>
-            <a href="#">Campania</a>
-            <a href="#">Emilia Romagna</a>
-            <a href="#">Friuli-Venezia Giulia</a>
-            <a href="#">Lazio</a>
-            <a href="#">Liguria</a>
-            <a href="#">Lombardia</a>
-            <a href="#">Marche</a>
-            <a href="#">Molise</a>
-            <a href="#">Piemonte</a>
-            <a href="#">Puglia</a>
-            <a href="#">Sardegna</a>
-            <a href="#">Sicilia</a>
-            <a href="#">Trentino-Alto Adige</a>
-            <a href="#">Toscana</a>
-            <a href="#">Umbria</a>
-            <a href="#">Veneto</a>
-            <a href="#">Valle d'Aosta</a>
-          </div>
-          -->
         </div>
         <a href="#">About</a>
         <a href="../paginaLogin/login.php"><span class="glyphicon glyphicon-user"></span></i>  Sign in</a>
       </div>
-     </div>
+    </div>
     <!--LAYOUT-->
     <div id="ultimi_dati">
       <div class="column left">
@@ -56,25 +33,21 @@
           <div class="confirmed">{{ totaleCasi }}</div>
           <h2 class="legend">
             <div class="color" style="background: rgb(244, 195, 99)"></div>
-            <div class="description">Casi positivi</div>
+            <div class="description">Nuovi positivi</div>
             <div class="total">
-              {{ totalePositivi }}
+              {{ nuoviPositivi }}
               <div class="delta"> {{ varPositivi }}</div>
             </div>
           </h2>
           <h2 class="legend">
             <div class="color" style="background: rgb(32, 235, 25)"></div>
             <div class="description">Dimessi guariti</div>
-            <div class="total">
-              {{ dimessiGuariti }}
-            </div>
+            <div class="total">{{ dimessiGuariti }}</div>
           </h2>
           <h2 class="legend">
             <div class="color" style="background: rgb(158, 9, 9)"></div>
             <div class="description">Deceduti</div>
-            <div class="total">
-              {{ deceduti }}
-            </div>
+            <div class="total">{{ deceduti }}</div>
           </h2>
           <!--COLLAPSE-->
           <a href="#demo" class="lastUpdate" data-toggle="collapse">Ulteriori informazioni</a>
@@ -82,116 +55,47 @@
             <h2 class="legend">
               <div class="color" style="background: rgb(32, 235, 25)"></div>
               <div class="description">Ricoverati con sintomi</div>
-              <div class="total">
-                {{ italia.ricoverati_con_sintomi }}  
-              </div>
+              <div class="total">{{ italia.ricoverati_con_sintomi }}</div>
             </h2>
             <h2 class="legend">
               <div class="color" style="background: rgb(32, 235, 25)"></div>
               <div class="description">Terapia intensiva</div>
-              <div class="total">
-                {{ terapiaIntensiva }}  
-              </div>            
+              <div class="total">{{ terapiaIntensiva }}</div>            
             </h2>
             <h2 class="legend">
               <div class="color" style="background: rgb(32, 235, 25)"></div>
               <div class="description">Totale ospedalizzati</div>
-              <div class="total">
-                {{ totaleOspedalizzati }}  
-              </div>          
+              <div class="total">{{ totaleOspedalizzati }}</div>          
             </h2>  
             <h2 class="legend">
               <div class="color" style="background: rgb(32, 235, 25)"></div>
               <div class="description">Isolamento domiciliare</div>
-              <div class="total">
-                {{ isolamentoDomiciliare }}  
-              </div>            
+              <div class="total">{{ isolamentoDomiciliare }}</div>            
             </h2>
             <h2 class="legend">
               <div class="color" style="background: rgb(32, 235, 25)"></div>
               <div class="description">Nuovi positivi</div>
-              <div class="total">
-                {{ nuoviPositivi }}  
-              </div>            
+              <div class="total">{{ nuoviPositivi }}</div>            
             </h2>
             <h2 class="legend">
               <div class="color" style="background: rgb(32, 235, 25)"></div>
               <div class="description">Tamponi</div>
-              <div class="total">
-                {{ tamponi }}  
-              </div>            
+              <div class="total">{{ tamponi }}</div>            
             </h2>
             <h2 class="legend">
               <div class="color" style="background: rgb(32, 235, 25)"></div>
               <div class="description">Casi testati</div>
-              <div class="total">
-                {{ casiTestati }}  
-              </div>
+              <div class="total">{{ casiTestati }}</div>
             </h2>
           </div>
         </div>
         </br>
-      </br>
-          <div id="areaReg" class="areas deep">
-            <div class="areaDiv">
-              <div id="abruzzo" class="area" tabindex="0">
-                <div class="areaName" title="Abruzzo">Abruzzo {{ totalePositivi }}</div>
-              </div>
-              <div id="basilicata" class="area" tabindex="0">
-                <div class="areaName" title="Basilicata">Basilicata {{ totalePositivi }}</div>
-              </div>
-              <div id="campania" class="area" tabindex="0">
-                <div class="areaName" title="Campania">Campania {{ totalePositivi }}</div>
-              </div>
-              <div id="calabria" class="area" tabindex="0">
-                <div class="areaName" title="Calabria">Calabria {{ totalePositivi }}</div>
-              </div>
-              <div id="emilia-roLombardianeziagiulia" class="area" tabindex="0">
-                <div class="areaName" title="Friuli-Venezia Giulia">Friuli-Venezia Giulia {{ totalePositivi }}</div>
-              </div>
-              <div id="lazio" class="area" tabindex="0">
-                <div class="areaName" title="Lazio">Lazio {{ totalePositivi }}</div>
-              </div>
-              <div id="liguria" class="area" tabindex="0">
-                <div class="areaName" title="Liguria">Liguria {{ totalePositivi }}</div>
-              </div>
-                <div id="lombardia" class="area" tabindex="0">
-                    <div class="areaName" title="Lombardia">Lombardia {{ totalePositivi }}</div>
-                </div>
-                <div id="marche" class="area" tabindex="0">
-                  <div class="areaName" title="Marche">Marche {{ totalePositivi }}</div>
-                </div>
-                <div id="molise" class="area" tabindex="0">
-                  <div class="areaName" title="Molise">Molise {{ totalePositivi }}</div>
-                </div>
-                <div id="piemonte" class="area" tabindex="0">
-                  <div class="areaName" title="Piemonte">Piemonte {{ totalePositivi }}</div>
-                </div>
-                <div id="puglia" class="area" tabindex="0">
-                  <div class="areaName" title="Puglia">Puglia {{ totalePositivi }}</div>
-                </div>
-                <div id="sardegna" class="area" tabindex="0">
-                  <div class="areaName" title="Sardegna">Sardegna {{ totalePositivi }}</div>
-                </div>
-                <div id="sicilia" class="area" tabindex="0">
-                  <div class="areaName" title="Sicilia">Sicilia {{ totalePositivi }}</div>
-                </div>
-                <div id="trentino-altoadige" class="area" tabindex="0">
-                  <div class="areaName" title="Trentino-Alto Adige">Trentino-Alto Adige {{ totalePositivi }}</div>
-                </div>
-                <div id="toscana" class="area" tabindex="0">
-                  <div class="areaName" title="Toscana">Toscana {{ totalePositivi }}</div>
-                </div>
-                <div id="umbria" class="area" tabindex="0">
-                  <div class="areaName" title="Umbria">Umbria {{ totalePositivi }}</div>
-                </div>
-                <div id="veneto" class="area" tabindex="0">
-                  <div class="areaName" title="Veneto">Veneto {{ totalePositivi }}</div>
-                </div>
-                <div id="valle-daosta" class="area" tabindex="0">
-                  <div class="areaName" title="Valle d'Aosta">Valle d'Aosta {{ totalePositivi }}</div>
-                  </div>
-            </div>
+        </br>
+        <div id="areaReg" class="listaRegioni">
+          <div v-for="(x,index) in regioni" class="area" tabindex="0">
+              <div class="nome">{{x.denominazione_regione}}</div>
+              <div class="totale">{{x.totale_positivi}}</div>
+          </div>
         </div>
         <div id="demo" class="collapse">
           <ul class="lista">
@@ -199,50 +103,25 @@
             <li id="terapiaInt">Terapia intensiva {{ terapiaIntensiva }}</li>
             <li id="ospedalizzati">Totale ospedalizzati {{ totaleOspedalizzati }}</li>
             <li id="isolamento">Isolamento domiciliare {{ isolamentoDomiciliare }}</li>
-            <li id="nuovipos">Nuovi positivi {{ nuoviPositivi }}</li>
+            <li id="nuovipos">Totale positivi {{ totalePositivi }}</li>
             <li id="tamponi">Tamponi {{ tamponi }}</li>
             <li id="casitestati">Casi testati {{ casiTestati }}</li>
           </ul>
          </div>
       </div>
-     </div>
-          <!--<h3>Andamento</h3>
-          <ul class="lista">
-            <li id="ricoverati">Ricoverati con sintomi {{ italia.ricoverati_con_sintomi }}</li>
-            <li id="terapiaInt">Terapia intensiva {{ terapiaIntensiva }}</li>
-            <li id="ospedalizzati">Totale ospedalizzati {{ totaleOspedalizzati }}</li>
-            <li id="isolamento">Isolamento domiciliare {{ isolamentoDomiciliare }}</li>
-            <li id="positivitot">Totale positivi {{ totalePositivi }} ({{ varPositivi }}) </li>
-            <li id="nuovipos">Nuovi positivi {{ nuoviPositivi }}</li>
-            <li id="guariti">Guariti  {{ dimessiGuariti }}</li>
-            <li id="deceduti">Deceduti {{ deceduti }}</li>
-            <li id="casitot">Casi totali {{ totaleCasi }}</li>
-            <li id="tamponi">Tamponi {{ tamponi }}</li>
-            <li id="casitestati">Casi testati {{ casiTestati }}</li>
-          </ul>-->
-        </div>
-      </div>
+    </div>
         <!--Mappa centrale monitoraggio-->
-      <div id="centro" class="column middle">
-      </div>
-    </div>  
+    <div id="centro" class="column middle"></div>  
     <!-- GRAFICO -->
-      <div id="graf" class="column right">
+    <div id="graf" class="column right">
         <canvas id="myChartD" width='100%' height="70%">{{ trendDeceduti }}</canvas>
         <canvas id="myChartP" width='100%' height="70%">{{ trendPositivi }}</canvas>
         <canvas id="myChartG" width='100%' height="70%">{{ trendGuariti }}</canvas>
-      </div>
+    </div>
     
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-   <script type="text/javascript" src="home.js"></script>
-   <script type="text/javascript" src="sketch.js"></script>
-   <script type="text/javascript" src="grafico.js"></script>
+    <script type="text/javascript" src="home.js"></script>
+    <script type="text/javascript" src="sketch.js"></script>
+    <script type="text/javascript" src="grafico.js"></script>
   </body>
 </html>
- <!--
-         <div id="graf" class="column right" style="background-color:#ccc;">
-          <canvas id="myChartD" class="column right">{{ trendDeceduti }}</canvas>
-          <canvas id="myChartP">{{ trendPositivi }}</canvas>
-          <canvas id="myChartG">{{ trendGuariti }}</canvas>
-        </div>
- -->

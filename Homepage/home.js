@@ -4,7 +4,8 @@ var italia = new Vue({
         return{
             loading: true,
             error: false,
-            italia: []
+            italia: [],
+            regioni: []
         };
     },
 
@@ -82,6 +83,17 @@ var italia = new Vue({
     mounted () {
         axios.get('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json')
         .then(response => {this.italia = response.data[0]})
+        .catch(error => {
+            console.log(error)
+            this.errored=true;
+        })
+        .finally(() => {
+            this.loading=false
+        });
+        axios.get('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni-latest.json')
+        .then(response => {
+            console.log(response.data);
+                this.regioni = response.data})
         .catch(error => {
             console.log(error)
             this.errored=true;
