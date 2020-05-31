@@ -44,13 +44,13 @@
                 <thead>
                   <tr class="pricing-top-heading">
                     <th class="free">TOTALE CASI</th>
-                    <th class="basic">TOTALE POSITIVI</th>
+                    <th class="basic">NUOVI POSITIVI</th>
                     <th class="pro">DECEDUTI</th>
                   </tr>
                   <tr class="pricing-bottom-heading small">
                     <th class="free"><strong>{{totaleCasi}}</strong>
                       </th>
-                    <th class="basic"><strong>{{totalePositivi}} <div id='variazione' v-bind:style="{color: computeColor}">({{variazioneTotalePositivi}})</div></th>
+                    <th class="basic"><strong>{{nuoviPositivi}} <div id='variazione' v-bind:style="{color: computeColor}">({{variazioneTotalePositivi}})</div></th>
                     <th class="pro"><strong>{{totaleDeceduti}}</strong>
                       </th>
                   </tr>

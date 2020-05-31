@@ -165,6 +165,10 @@ body {
   padding-bottom: 20px;
 }
 
+.infoTile .moreinfo{
+  position: relative;
+}
+
 .legend:first-child {
   padding-top: 12px;
 }
@@ -188,6 +192,7 @@ body {
   height: 8px;
   border-radius: 8px;
 }
+
 
 .legend .description {
   font-weight: 600;

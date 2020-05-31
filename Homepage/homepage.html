@@ -18,8 +18,8 @@
     <div class="navbar">
       <div class="navbar-right">
         <div class="dropdown">
-          <button class="dropbtn" href="../Regioni/regioni.html" >Regioni</button>
-          <div class="dropdown-content">
+          <a href="../Regioni/regioni.html" >Regioni</a>
+          <!--<div class="dropdown-content">
             <a href="#">Abruzzo</a>
             <a href="#">Basilicata</a>
             <a href="#">Calabria</a>
@@ -41,19 +41,19 @@
             <a href="#">Veneto</a>
             <a href="#">Valle d'Aosta</a>
           </div>
+          -->
         </div>
         <a href="#">About</a>
-        <a href="../paginaLogin/login.html"><span class="glyphicon glyphicon-user"></span></i>Sign in</a>
+        <a href="../paginaLogin/login.php"><span class="glyphicon glyphicon-user"></span></i>  Sign in</a>
       </div>
-    </div>
+     </div>
     <!--LAYOUT-->
     <div id="ultimi_dati">
       <div class="column left">
         <div class="infoTile">
-          
           <div class="lastUpdate">Aggiornato il {{ giorno }} alle {{ ora }}</div>
           <h2 class="title" title="Totale casi confermati">Totale casi confermati</h2>
-        <div class="confirmed">{{ totaleCasi }}</div>
+          <div class="confirmed">{{ totaleCasi }}</div>
           <h2 class="legend">
             <div class="color" style="background: rgb(244, 195, 99)"></div>
             <div class="description">Casi positivi</div>
@@ -76,23 +76,60 @@
               {{ deceduti }}
             </div>
           </h2>
-
+          <!--COLLAPSE-->
+          <a href="#demo" class="lastUpdate" data-toggle="collapse">Ulteriori informazioni</a>
+          <div id="demo" class="collapse">
+            <h2 class="legend">
+              <div class="color" style="background: rgb(32, 235, 25)"></div>
+              <div class="description">Ricoverati con sintomi</div>
+              <div class="total">
+                {{ italia.ricoverati_con_sintomi }}  
+              </div>
+            </h2>
+            <h2 class="legend">
+              <div class="color" style="background: rgb(32, 235, 25)"></div>
+              <div class="description">Terapia intensiva</div>
+              <div class="total">
+                {{ terapiaIntensiva }}  
+              </div>            
+            </h2>
+            <h2 class="legend">
+              <div class="color" style="background: rgb(32, 235, 25)"></div>
+              <div class="description">Totale ospedalizzati</div>
+              <div class="total">
+                {{ totaleOspedalizzati }}  
+              </div>          
+            </h2>  
+            <h2 class="legend">
+              <div class="color" style="background: rgb(32, 235, 25)"></div>
+              <div class="description">Isolamento domiciliare</div>
+              <div class="total">
+                {{ isolamentoDomiciliare }}  
+              </div>            
+            </h2>
+            <h2 class="legend">
+              <div class="color" style="background: rgb(32, 235, 25)"></div>
+              <div class="description">Nuovi positivi</div>
+              <div class="total">
+                {{ nuoviPositivi }}  
+              </div>            
+            </h2>
+            <h2 class="legend">
+              <div class="color" style="background: rgb(32, 235, 25)"></div>
+              <div class="description">Tamponi</div>
+              <div class="total">
+                {{ tamponi }}  
+              </div>            
+            </h2>
+            <h2 class="legend">
+              <div class="color" style="background: rgb(32, 235, 25)"></div>
+              <div class="description">Casi testati</div>
+              <div class="total">
+                {{ casiTestati }}  
+              </div>
+            </h2>
           </div>
-            <!--COLLAPSE-->
-            <a href="#demo" class="btn btn-info" data-toggle="collapse">Ulteriori informazioni</a>
-            <div id="demo" class="collapse">
-              <ul class="lista">
-                <li id="ricoverati">Ricoverati con sintomi {{ italia.ricoverati_con_sintomi }}</li>
-                <li id="terapiaInt">Terapia intensiva {{ terapiaIntensiva }}</li>
-                <li id="ospedalizzati">Totale ospedalizzati {{ totaleOspedalizzati }}</li>
-                <li id="isolamento">Isolamento domiciliare {{ isolamentoDomiciliare }}</li>
-                <li id="nuovipos">Nuovi positivi {{ nuoviPositivi }}</li>
-
-                <li id="tamponi">Tamponi {{ tamponi }}</li>
-                <li id="casitestati">Casi testati {{ casiTestati }}</li>
-              </ul>
-             </div>
-
+        </div>
         </br>
       </br>
           <div id="areaReg" class="areas deep">
