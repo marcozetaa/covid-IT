@@ -3,7 +3,7 @@
   }
   
 body {
-    background: #fdfdfd;
+    background-color: #09688b;
     min-height: 100vh;
 }
   
@@ -11,7 +11,7 @@ body {
 .header {
   padding: 30px;
   text-align: center;
-  background: white;
+  background: #09688b;
 }
 
 .header h1 {
@@ -23,7 +23,7 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: #09688b;
 
 }
 
@@ -110,7 +110,7 @@ body {
 
 /* Add a card effect for articles */
 .card {
-  background-color: white;
+  background-color: #09688b;
   padding: 20px;
   margin-top: 20px;
 }

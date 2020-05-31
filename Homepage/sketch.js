@@ -52,8 +52,8 @@ function setup(){
         var x = mercatoreX(long) - cx;
         var y = mercatoreY(lat) - cy;
         
-        stroke(255,0,255);
-        fill(255, 204, 100);
+        stroke(127,51,0); // colore della circoferenza
+        fill(235, 184, 29); //colore interno del cerchio
         ellipse(x,y,positivi,positivi);    
     }
 }

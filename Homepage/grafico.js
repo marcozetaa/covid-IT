@@ -9,9 +9,9 @@ var myGraf= new Vue({
                 myPositivi: [],
                 myGuariti: [],
                 graph_attribute: [
-                    {id: 0, txt:"Deceduti", borderColor:'rgba(255, 99, 132, 1)', backgroundColor:'rgba(255, 99, 132, 0.2)'},
-                    {id: 1, txt:"Positivi", borderColor:'rgba(54, 162, 235, 1)', backgroundColor:'rgba(255, 99, 132, 0.2)'},
-                    {id: 2, txt:"Guariti", borderColor:'rgba(255, 206, 86, 1)', backgroundColor:'rgba(255, 99, 132, 0.2)'},
+                    {id: 0, txt:"Deceduti", borderColor:'#FF6F00', backgroundColor:'rgba(255, 111, 0, 0.6)'},
+                    {id: 1, txt:"Positivi", borderColor:'#66ffff', backgroundColor:'rgba(102, 255, 255, 0.6)'},
+                    {id: 2, txt:"Guariti", borderColor:'rgba(255, 206, 86, 1)', backgroundColor:'rgba(255, 206, 86, 0.6)'},
                 ]
             };
         },
