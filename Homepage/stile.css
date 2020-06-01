@@ -1,22 +1,144 @@
-body {
-    margin: 0;
-    font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+#header {
+  color: #fff;
+  cursor: default;
+  padding: 35px;
+  margin: 2px;
+  height: 3.25em;
+  left: 0;
+  line-height: 3.25em;
+  text-align: right;
+  top: 2em;
+  width: 100%;
+  z-index: 10001;
+}
+
+  #header .inner {
+    margin: 0 auto;
+    position: relative;
   }
+
+  #header .logo {
+    color: #ffffff;
+    display: inline-block;
+    font-weight: 400;
+    height: inherit;
+    left: 0;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    font-size: 1em;
+  }
+
+    #header .logo strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+  #header a {
+    -moz-transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    display: inline-block;
+    padding: 0 0.75em;
+    color: inherit;
+    text-decoration: none;
+    font-size: 1em;
+  }
+
+    #header a:hover {
+      color: rgb(235,184,29);
+    }
+
+    #header a:last-child {
+      padding-right: 0;
+    }
+
+    #header a.navPanelToggle {
+      display: none;
+      text-decoration: none;
+      height: 4em;
+      width: 4em;
+      z-index: 10003;
+    }
+
+      #header a.navPanelToggle .fa {
+        font-size: 1.25em;
+      }
+
+      @media screen and (max-width: 980px) {
+
+        #header a.navPanelToggle {
+          display: inline-block;
+        }
+
+      }
+
+    @media screen and (max-width: 736px) {
+
+      #header a {
+        padding: 0 0.5em;
+      }
+
+    }
+
+@media screen and (max-width: 980px) {
+
+  #header {
+    top: 1em;
+  }
+
+}
+
+@media screen and (max-width: 736px) {
+
+  #header {
+    top: .5em;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  #header {
+    font-size: .9em;
+  }
+
+}
 
 
   /* NAVIGATION BAR */
 
-
   .navbar {
+    padding: .5%;
     overflow: hidden;
     background-color: #09688b; 
+    border: 10px solid #94918c;
   }
 
  .navbar-right{
    float: right;
  }
 
-  .navbar a {
+  .navbar a:link, a:visited {
+    -moz-transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
     float: left;
     font-size: 16px;
     color: white;
@@ -41,8 +163,8 @@ body {
     margin: 0;
   }
   
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(235,184,29);
+  .navbar a:hover{
+    color: rgb(235,184,29);
   }
   
   .dropdown-content {
@@ -72,6 +194,14 @@ body {
   }
 
     /* LAYOUT */
+    
+#inner {
+  padding: 5px;
+  margin: 30px;
+  border-top: 1px solid rgb(255,255,255);
+  border-top-width: 1px;
+  border-top-style: solid;
+}
 
 .andamento{
   background-color: #f1f1f1;
@@ -113,22 +243,6 @@ body {
 
 .lista{
   list-style-type: disc;
-}
-
-#casitot{
-  color: blue;
-}
-
-#guariti{
-  color: green;
-}
-
-#deceduti{ 
-  color: red;
-}
-
-#casiatt{
-  color: yellow;
 }
 
 /*Stile per il pannello sinistro*/

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regioni</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylessheet"/>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylessheet"/>
     <link href="../css/bootstrap.min.css" rel="stylessheet"/>
@@ -20,12 +22,12 @@
   -->
   <div class="topnav navbar">
       <a href="#">Logo</a>
-      <a href="#" style="float:right;">Live</a>        
       <a href="../paginaLogin/login.html" style="float:right; border-left: 1px white;">Log in</a>
+      <a href="#" style="float:right;">Live</a>        
       <a href="../Homepage/homepage.html" style="float: right;">Homepage</a>
   </div>
 
-  <div id="component-regione" class="row">
+  <div id="component-regione" class="row" style="background-color: #09688b;">
     <transition name="fade">
       <section key="1" v-if="errored">
         <p>C'è un problema nel ricevere i dati in qeusto momento, ci scusiamo per il disagio</p>
@@ -36,8 +38,8 @@
       </div>
       <div key="3" v-else class="leftcolumn">
         <div id="dataoutput" class="card">
-          <h2>{{ nomeRegione }}</h2>
-          <h5>Ultimo aggiornamento : {{ data }}</h5>
+          <h2 style="color: rgb(235,184,29);">{{ nomeRegione }}</h2>
+          <h5 style="color: white;">Ultimo aggiornamento : {{ data }}</h5>
           <img v-bind:src="image"></img>
           <div class="container">
             <div class="row">
@@ -108,7 +110,7 @@
     </transition>
     <div class="rightcolumn">
       <div class="card">
-        <h2>LISTA REGIONI</h2>
+        <h2 style="text-align: center; color: rgb(235,184,29);">LISTA REGIONI</h2>
         <div class="select-box">
           <div v-for="(x,index) in regioni" class="select-box__current" >
             <label class="select-box__option" for="index" v-on:click="showRegione(index)">

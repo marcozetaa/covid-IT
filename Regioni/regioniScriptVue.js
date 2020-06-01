@@ -94,9 +94,6 @@ var regione = new Vue({
         noteIT: function(){
             return this.regioni[this.regioneSelezionata].note_it;
         },
-        info: function(){
-            return this.immagini[this.regioneSelezionata].info;
-        },
         image: function(){
             return this.immagini[this.regioneSelezionata].image;
         },

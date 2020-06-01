@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Homepage</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="stile.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -14,109 +16,124 @@
     <script type="text/javascript" src="../Vue/vue.min.js"></script>
   </head>
   <body style="background-color: #09688b;">
-    <!-- NAVBAR-->
+
+		<!-- Header -->
+    <header id="header">
+      <div class="inner">
+        <a href="index.html" class="logo">logo</a>
+        <nav id="nav">
+          <a href="../Homepage/homepage.html">Homepage</a>
+          <a href="../Regioni/regioni.html">Regioni</a>
+          <a href="../paginaLogin/login.php"><span class="glyphicon glyphicon-user"></span>Sign in</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- NAVBAR
     <div class="navbar">
+      <a>logo</a>
       <div class="navbar-right">
-        <div class="dropdown">
-          <a href="../Regioni/regioni.html" >Regioni</a>
-        </div>
+        <a href="../Regioni/regioni.html">Regioni</a>
         <a href="#">About</a>
         <a href="../paginaLogin/login.php"><span class="glyphicon glyphicon-user"></span></i>  Sign in</a>
       </div>
     </div>
-    <!--LAYOUT-->
-    <div id="ultimi_dati">
-      <div class="column left">
-        <div class="infoTile">
-          <div class="lastUpdate">Aggiornato il {{ giorno }} alle {{ ora }}</div>
-          <h2 class="title" title="Totale casi confermati">Totale casi confermati</h2>
-          <div class="confirmed">{{ totaleCasi }}</div>
-          <h2 class="legend">
-            <div class="color" style="background: #66ffff"></div>
-            <div class="description">Nuovi positivi</div>
-            <div class="total">
-              {{ nuoviPositivi }}
-              <div class="delta"> {{ varPositivi }}</div>
-            </div>
-          </h2>
-          <h2 class="legend">
-            <div class="color" style="background: #FF6F00"></div>
-            <div class="description">Deceduti</div>
-            <div class="total">{{ deceduti }}</div>
-          </h2>
-          <h2 class="legend">
-            <div class="color" style="background: rgba(255, 206, 86)"></div>
-            <div class="description">Dimessi guariti</div>
-            <div class="total">{{ dimessiGuariti }}</div>
-          </h2>
-          <!--COLLAPSE-->
-          <a href="#demo" class="lastUpdate" data-toggle="collapse">Ulteriori informazioni</a>
-          <div id="demo" class="collapse">
+    -->
+    <div id="inner">
+      <!--LAYOUT-->
+      <div id="ultimi_dati">
+        <div class="column left">
+          <div class="infoTile">
+            <div class="lastUpdate">Aggiornato il {{ giorno }} alle {{ ora }}</div>
+            <h2 class="title" title="Totale casi confermati">Totale casi confermati</h2>
+            <div class="confirmed">{{ totaleCasi }}</div>
             <h2 class="legend">
-              <div class="color" style="background: #004c68"></div>
-              <div class="description">Ricoverati con sintomi</div>
-              <div class="total">{{ italia.ricoverati_con_sintomi }}</div>
-            </h2>
-            <h2 class="legend">
-              <div class="color" style="background: #004c68"></div>
-              <div class="description">Terapia intensiva</div>
-              <div class="total">{{ terapiaIntensiva }}</div>            
-            </h2>
-            <h2 class="legend">
-              <div class="color" style="background: #004c68"></div>
-              <div class="description">Totale ospedalizzati</div>
-              <div class="total">{{ totaleOspedalizzati }}</div>          
-            </h2>  
-            <h2 class="legend">
-              <div class="color" style="background: #004c68"></div>
-              <div class="description">Isolamento domiciliare</div>
-              <div class="total">{{ isolamentoDomiciliare }}</div>            
-            </h2>
-            <h2 class="legend">
-              <div class="color" style="background: #004c68"></div>
+              <div class="color" style="background: #66ffff"></div>
               <div class="description">Nuovi positivi</div>
-              <div class="total">{{ nuoviPositivi }}</div>            
+              <div class="total">
+                {{ nuoviPositivi }}
+                <div class="delta"> {{ varPositivi }}</div>
+              </div>
             </h2>
             <h2 class="legend">
-              <div class="color" style="background: #004c68"></div>
-              <div class="description">Tamponi</div>
-              <div class="total">{{ tamponi }}</div>            
+              <div class="color" style="background: #FF6F00"></div>
+              <div class="description">Deceduti</div>
+              <div class="total">{{ deceduti }}</div>
             </h2>
             <h2 class="legend">
-              <div class="color" style="background: #004c68"></div>
-              <div class="description">Casi testati</div>
-              <div class="total">{{ casiTestati }}</div>
+              <div class="color" style="background: rgba(255, 206, 86)"></div>
+              <div class="description">Dimessi guariti</div>
+              <div class="total">{{ dimessiGuariti }}</div>
             </h2>
+            <!--COLLAPSE-->
+            <a href="#demo" class="lastUpdate" data-toggle="collapse">Ulteriori informazioni</a>
+            <div id="demo" class="collapse">
+              <h2 class="legend">
+                <div class="color" style="background: #004c68"></div>
+                <div class="description">Ricoverati con sintomi</div>
+                <div class="total">{{ italia.ricoverati_con_sintomi }}</div>
+              </h2>
+              <h2 class="legend">
+                <div class="color" style="background: #004c68"></div>
+                <div class="description">Terapia intensiva</div>
+                <div class="total">{{ terapiaIntensiva }}</div>            
+              </h2>
+              <h2 class="legend">
+                <div class="color" style="background: #004c68"></div>
+                <div class="description">Totale ospedalizzati</div>
+                <div class="total">{{ totaleOspedalizzati }}</div>          
+              </h2>  
+              <h2 class="legend">
+                <div class="color" style="background: #004c68"></div>
+                <div class="description">Isolamento domiciliare</div>
+                <div class="total">{{ isolamentoDomiciliare }}</div>            
+              </h2>
+              <h2 class="legend">
+                <div class="color" style="background: #004c68"></div>
+                <div class="description">Nuovi positivi</div>
+                <div class="total">{{ nuoviPositivi }}</div>            
+              </h2>
+              <h2 class="legend">
+                <div class="color" style="background: #004c68"></div>
+                <div class="description">Tamponi</div>
+                <div class="total">{{ tamponi }}</div>            
+              </h2>
+              <h2 class="legend">
+                <div class="color" style="background: #004c68"></div>
+                <div class="description">Casi testati</div>
+                <div class="total">{{ casiTestati }}</div>
+              </h2>
+            </div>
+          </div>
+          </br>
+          </br>
+          <div id="areaReg" class="listaRegioni">
+            <div v-for="(x,index) in regioni" class="area" tabindex="0">
+                <div class="nome">{{x.denominazione_regione}}</div>
+                <div class="totale">{{x.totale_positivi}}</div>
+            </div>
+          </div>
+          <div id="demo" class="collapse">
+            <ul class="lista">
+              <li id="ricoverati">Ricoverati con sintomi {{ italia.ricoverati_con_sintomi }}</li>
+              <li id="terapiaInt">Terapia intensiva {{ terapiaIntensiva }}</li>
+              <li id="ospedalizzati">Totale ospedalizzati {{ totaleOspedalizzati }}</li>
+              <li id="isolamento">Isolamento domiciliare {{ isolamentoDomiciliare }}</li>
+              <li id="nuovipos">Totale positivi {{ totalePositivi }}</li>
+              <li id="tamponi">Tamponi {{ tamponi }}</li>
+              <li id="casitestati">Casi testati {{ casiTestati }}</li>
+            </ul>
           </div>
         </div>
-        </br>
-        </br>
-        <div id="areaReg" class="listaRegioni">
-          <div v-for="(x,index) in regioni" class="area" tabindex="0">
-              <div class="nome">{{x.denominazione_regione}}</div>
-              <div class="totale">{{x.totale_positivi}}</div>
-          </div>
-        </div>
-        <div id="demo" class="collapse">
-          <ul class="lista">
-            <li id="ricoverati">Ricoverati con sintomi {{ italia.ricoverati_con_sintomi }}</li>
-            <li id="terapiaInt">Terapia intensiva {{ terapiaIntensiva }}</li>
-            <li id="ospedalizzati">Totale ospedalizzati {{ totaleOspedalizzati }}</li>
-            <li id="isolamento">Isolamento domiciliare {{ isolamentoDomiciliare }}</li>
-            <li id="nuovipos">Totale positivi {{ totalePositivi }}</li>
-            <li id="tamponi">Tamponi {{ tamponi }}</li>
-            <li id="casitestati">Casi testati {{ casiTestati }}</li>
-          </ul>
-         </div>
       </div>
-    </div>
-        <!--Mappa centrale monitoraggio-->
-    <div id="centro" class="column middle"></div>  
-    <!-- GRAFICO -->
-    <div id="graf" class="column right">
-        <canvas id="myChartP" width='100%' height="70%">{{ trendPositivi }}</canvas>
-        <canvas id="myChartD" width='100%' height="70%">{{ trendDeceduti }}</canvas>
-        <canvas id="myChartG" width='100%' height="70%">{{ trendGuariti }}</canvas>
+          <!--Mappa centrale monitoraggio-->
+      <div id="centro" class="column middle"></div>  
+      <!-- GRAFICO -->
+      <div id="graf" class="column right">
+          <canvas id="myChartP" width='100%' height="70%">{{ trendPositivi }}</canvas>
+          <canvas id="myChartD" width='100%' height="70%">{{ trendDeceduti }}</canvas>
+          <canvas id="myChartG" width='100%' height="70%">{{ trendGuariti }}</canvas>
+      </div>
     </div>
     
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
