@@ -4,31 +4,27 @@
   <title>Regioni</title>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylessheet"/>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylessheet"/>
     <link href="../css/bootstrap.min.css" rel="stylessheet"/>
     <link href="style.css" rel="stylesheet"/>
     
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="../Vue/vue.min.js"></script>
 </head>
 <body style="background-color: #09688b;">
-  <!--
-  <div class="header">
-  <h1>TITOLO DEL SITO (FACOLTATIVO)</h1>
-  <p>Resize the browser window to see the effect.</p>
-  </div>
-  -->
-  <div class="navbar">
-    <div class="navbar-right">
-      <div class="dropdown">
-        <a href="../Homepage/homepage.html">Home</a>
-      </div>
-      <a href="#">About</a>
-      <a href="../paginaLogin/login.php"><span class="glyphicon glyphicon-user"></span></i>  Sign in</a>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="inner">
+      <a href="index.html" class="logo">logo</a>
+      <nav id="nav">
+        <a href="../Homepage/homepage.html">Homepage</a>  
+        <a href="../paginaLogin/login.php"><span class="glyphicon glyphicon-user"></span>Sign in</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
   <div id="component-regione" class="row" style="background-color: #09688b;">
     <transition name="fade">

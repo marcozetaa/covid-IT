@@ -10,6 +10,10 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 
@@ -29,33 +33,26 @@
 			<section id="banner">
 				<div class="inner">
 					<header>
-						<h1>About us</h1>
+						<h1>Monitoraggio COVID Italia</h1>
 					</header>
 
 					<div class="flex ">
-
 						<div>
 							<span class="icon fa-car"></span>
-							<h3>Aliquam</h3>
-							<p>Suspendisse amet ullamco</p>
+							<p>
+								Questo sito raccoglie tutti i dati, provenienti direttamente dal 
+								Dipartimento di Protezione Civile, relativi al monitoraggio 
+								del virus pandemico COVID-19 a livello nazionale e regionale
+								(presto anche sulle province), utilizzando una interfaccia facile 
+								e accessibile a chiunque. Lo scopo è quello di poter diffondere
+								una informazione pulita e chiara riguardo la situazione pandemica nazionale.
+							</p>
 						</div>
-
-						<div>
-							<span class="icon fa-camera"></span>
-							<h3>Elementum</h3>
-							<p>Class aptent taciti ad litora</p>
-						</div>
-
-						<div>
-							<span class="icon fa-bug"></span>
-							<h3>Ultrices</h3>
-							<p>Nulla vitae mauris non felis</p>
-						</div>
-
 					</div>
-
 					<footer>
-						<a href="#" class="button">Get Started</a>
+						<a href="https://covid19.who.int/?gclid=CjwKCAjwztL2BRATEiwAvnALcg8YaOESmXYb17KeelPFS0bPhqvC_AuP1fqGffsb1MmzVscp0Rcl0RoC4hUQAvD_BwE" class="button" target="_blank">
+							Monitoraggio mondiale OMS
+						</a>
 					</footer>
 				</div>
 			</section>
@@ -70,11 +67,11 @@
 								<img src="images/pic01.jpg" alt="Pic 01" />
 							</div>
 							<header>
-								<h3>Lorem ipsum<br /> dolor amet nullam</h3>
+								<h3>Marco Zanghieri<br />Ingegnere informatico</h3>
 							</header>
 							<p>Morbi in sem quis dui placerat ornare. Pellentesquenisi<br />euismod in, pharetra a, ultricies in diam sed arcu. Cras<br />consequat  egestas augue vulputate.</p>
 							<footer>
-								<a href="#" class="button">Learn More</a>
+								<a href="#" class="button">Instagram</a>
 							</footer>
 						</article>
 						<article>
@@ -82,11 +79,11 @@
 								<img src="images/pic02.jpg" alt="Pic 02" />
 							</div>
 							<header>
-								<h3>Sed feugiat<br /> tempus adipicsing</h3>
+								<h3>Benedetta Zelada<br />Ingegnere Informatico</h3>
 							</header>
 							<p>Pellentesque fermentum dolor. Aliquam quam lectus<br />facilisis auctor, ultrices ut, elementum vulputate, nunc<br /> blandit ellenste egestagus commodo.</p>
 							<footer>
-								<a href="#" class="button">Learn More</a>
+								<a href="#" class="button">Instagram</a>
 							</footer>
 						</article>
 					</div>
@@ -97,31 +94,30 @@
 			<footer id="footer">
 				<div class="inner">
 
-					<h3>Get in touch</h3>
+					<h3><span class="glyphicon glyphicon-envelope"></span>	Contattaci</h3>
 
-					<form action="#" method="post">
-
+					<form action="messageHandler.php" method="post">
 						<div class="field half first">
-							<label for="name">Name</label>
-							<input name="name" id="name" type="text" placeholder="Name">
+							<label for="name">Nome</label>
+							<input name="name" id="name" type="text" placeholder="Nome">
 						</div>
 						<div class="field half">
 							<label for="email">Email</label>
 							<input name="email" id="email" type="email" placeholder="Email">
 						</div>
 						<div class="field">
-							<label for="message">Message</label>
-							<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+							<label for="message">Messaggio</label>
+							<textarea name="message" id="message" rows="6" placeholder="Messaggio"></textarea>
 						</div>
 						<ul class="actions">
-							<li><input value="Send Message" class="button alt" type="submit"></li>
+							<li><input name="messageButton" value="Send Message" class="button alt" type="submit"></li>
 						</ul>
 					</form>
-
+					<!--
 					<div class="copyright">
 						&copy; Untitled. Design: <a href="https://templated.co">TEMPLATED</a>. Images: <a href="https://unsplash.com">Unsplash</a>.
 					</div>
-
+					-->
 				</div>
 			</footer>
 
