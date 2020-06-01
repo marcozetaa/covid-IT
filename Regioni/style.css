@@ -21,10 +21,9 @@ body {
  /* NAVIGATION BAR */
 
 
-.navbar {
+ .navbar {
   overflow: hidden;
-  background-color: #09688b;
-
+  background-color: #09688b; 
 }
 
 .navbar-right{
@@ -57,7 +56,7 @@ body {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: rgb(235,184,29);
 }
 
 .dropdown-content {
@@ -85,6 +84,7 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
   
 /* Create two unequal columns that floats next to each other */
 /* Left column */
