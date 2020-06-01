@@ -74,8 +74,8 @@
             </h2>
             <h2 class="legend">
               <div class="color" style="background: #004c68"></div>
-              <div class="description">Nuovi positivi</div>
-              <div class="total">{{ nuoviPositivi }}</div>            
+              <div class="description">Totale positivi</div>
+              <div class="total">{{ totalePositivi }}</div>            
             </h2>
             <h2 class="legend">
               <div class="color" style="background: #004c68"></div>
@@ -92,12 +92,13 @@
         </br>
         </br>
         <div id="areaReg" class="listaRegioni">
-          <div v-for="(x,index) in regioni" class="area" tabindex="0">
-              <div class="nome">{{x.denominazione_regione}}</div>
-              <div class="totale">{{x.totale_positivi}}</div>
-          </div>
+          <ul v-for="(x,index) in regioni" class="list-group" tabindex="0">
+              <li class="list-group-item" id="nome">
+              <span class="badge" style="background-color: #FF6F00;" id="totale">{{x.totale_positivi}}</span>
+              {{x.denominazione_regione}}</li>
+          </ul>
         </div>
-        <div id="demo" class="collapse">
+        <!--<div id="demo" class="collapse">
           <ul class="lista">
             <li id="ricoverati">Ricoverati con sintomi {{ italia.ricoverati_con_sintomi }}</li>
             <li id="terapiaInt">Terapia intensiva {{ terapiaIntensiva }}</li>
@@ -107,7 +108,7 @@
             <li id="tamponi">Tamponi {{ tamponi }}</li>
             <li id="casitestati">Casi testati {{ casiTestati }}</li>
           </ul>
-         </div>
+         </div>-->
       </div>
     </div>
         <!--Mappa centrale monitoraggio-->

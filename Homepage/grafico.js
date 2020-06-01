@@ -1,3 +1,6 @@
+Chart.defaults.global.defaultFontColor = 'white';
+Chart.defaults.global.defaultFontFamily = 'Open Sans';
+
 var myGraf= new Vue({
     el: '#graf',
     data: function(){
@@ -30,7 +33,8 @@ var myGraf= new Vue({
                             borderColor: [
                                 this.graph_attribute[index].borderColor
                             ],
-                            borderWidth: 4
+                            borderWidth: 4,
+                            hoverBorderColor: 'black'
                         }]
                     },
                     options: {
@@ -40,6 +44,13 @@ var myGraf= new Vue({
                                     beginAtZero: true
                                 }
                             }]
+                        },
+                        title: {
+                            display: true,
+                            text: this.graph_attribute[index].txt
+                        },
+                        legend: {
+                            display: false
                         }
                     }
                 });  
