@@ -105,26 +105,16 @@
               </h2>
             </div>
           </div>
-          </br>
-          </br>
-          <div id="areaReg" class="listaRegioni">
-            <div v-for="(x,index) in regioni" class="area" tabindex="0">
-                <div class="nome">{{x.denominazione_regione}}</div>
-                <div class="totale">{{x.totale_positivi}}</div>
-            </div>
-          </div>
-          <div id="demo" class="collapse">
-            <ul class="lista">
-              <li id="ricoverati">Ricoverati con sintomi {{ italia.ricoverati_con_sintomi }}</li>
-              <li id="terapiaInt">Terapia intensiva {{ terapiaIntensiva }}</li>
-              <li id="ospedalizzati">Totale ospedalizzati {{ totaleOspedalizzati }}</li>
-              <li id="isolamento">Isolamento domiciliare {{ isolamentoDomiciliare }}</li>
-              <li id="nuovipos">Totale positivi {{ totalePositivi }}</li>
-              <li id="tamponi">Tamponi {{ tamponi }}</li>
-              <li id="casitestati">Casi testati {{ casiTestati }}</li>
+          <div id="areaReg" class="listaRegioni scrollbar">
+            <ul v-for="(x,index) in regioni" class="list-group" tabindex="0">
+                <li class="list-group-item" id="nome">
+                <span class="badge" style="background-color: #004c68;" id="totale">{{x.totale_positivi}}</span>
+                {{x.denominazione_regione}}</li>
             </ul>
           </div>
         </div>
+        </br>
+        </br>
       </div>
           <!--Mappa centrale monitoraggio-->
       <div id="centro" class="column middle"></div>  
