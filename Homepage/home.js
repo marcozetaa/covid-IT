@@ -96,7 +96,7 @@ var italia = new Vue({
             this.errored=true;
         })
         .finally(() => {
-            this.loading=false
+            this.loading=true;
         });
     }
 });

@@ -1,3 +1,7 @@
+<?php
+  include('../server.php');
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>

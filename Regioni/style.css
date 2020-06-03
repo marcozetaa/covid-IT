@@ -226,6 +226,11 @@ p {
   font-weight: 400;
 }
 
+strong {
+  font-weight: 300;
+  font-size: 25px;
+}
+
 /* Utilities */
 .no-padding {
   padding: 0 !important;
@@ -251,6 +256,7 @@ p {
   padding: 20px;
   font-weight: 300;
   height: 20%;
+  text-align: center;
 }
 
 .data-top-heading .free {
@@ -269,7 +275,6 @@ p {
 
 .data-bottom-heading .basic {
   background-color: rgb(235,184,29);
-  border: 1px solid #7fd1d2;
 }
 
 .data-top-heading .pro {
@@ -279,7 +284,6 @@ p {
 
 .data-bottom-heading .pro {
   background-color: rgb(235,184,29);
-  border: 1px solid #b9d17b;
 }
 
 .data-top-heading,
@@ -289,7 +293,7 @@ p {
 }
 
 table thead th {
-  border: 0;
+  border: 3px solid rgb(189, 148, 26);
 }
 
 /* table */
