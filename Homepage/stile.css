@@ -13,7 +13,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 #header {
   color: #fff;
   cursor: default;
-  padding: 35px;
+  padding: 30px;
   margin: 2px;
   height: 3.25em;
   left: 0;
@@ -30,23 +30,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   }
 
   #header .logo {
-    color: #ffffff;
+    height: 14%;
     display: inline-block;
-    font-weight: 400;
-    height: inherit;
-    left: 0;
-    line-height: inherit;
+    left: 50px;
     margin: 0;
     padding: 0;
     position: absolute;
     top: 0;
-    font-size: 1em;
   }
-
-    #header .logo strong {
-      color: #ffffff;
-      font-weight: 600;
-    }
 
   #header a {
     -moz-transition: color 0.2s ease-in-out;
@@ -121,10 +112,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     
 #inner {
   padding: 5px;
-  margin: 30px;
+  margin: 40px;
   border-top: 1px solid rgb(255,255,255);
   border-top-width: 1px;
-  border-top-style: solid;
 }
 
 .andamento{

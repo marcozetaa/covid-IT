@@ -24,8 +24,8 @@
 
   <!-- Header -->
   <header id="header">
+    <img class="logo" src="../Logo.jpg"> 
     <div class="inner">
-      <a href="index.html" class="logo">logo</a>
       <nav id="nav">
         <a href="../Homepage/homepage.html">Homepage</a>
         <a href="../aboutUs/aboutUs.html">About Us</a>  
@@ -45,37 +45,35 @@
       </div>
       <div key="3" v-else class="leftcolumn">
         <div id="dataoutput" class="card">
-          <h2 style="color: rgb(235,184,29);">{{ nomeRegione }}</h2>
+          <h2 style="font-size: 30px; padding-bottom: 20px; color: rgb(235,184,29);">{{ nomeRegione }}</h2>
           <h5 style="color: white;">Ultimo aggiornamento : {{ data }}</h5>
           <img v-bind:src="image"></img>
           <div class="container">
             <div class="row">
               <table>
                 <thead>
-                  <tr class="pricing-top-heading">
+                  <tr class="data-top-heading">
                     <th class="free">TOTALE CASI</th>
                     <th class="basic">NUOVI POSITIVI</th>
                     <th class="pro">DECEDUTI</th>
                   </tr>
-                  <tr class="pricing-bottom-heading small">
-                    <th class="free"><strong>{{totaleCasi}}</strong>
-                      </th>
-                    <th class="basic"><strong>{{nuoviPositivi}} <div id='variazione' v-bind:style="{color: computeColor}">({{variazioneTotalePositivi}})</div></th>
-                    <th class="pro"><strong>{{totaleDeceduti}}</strong>
-                      </th>
+                  <tr class="data-bottom-heading small">
+                    <th class="free"><strong>{{totaleCasi}}</strong></th>
+                    <th class="basic"><strong>{{nuoviPositivi}}<div id='variazione' v-bind:style="{color: computeColor}">({{variazioneTotalePositivi}})</div></th>
+                    <th class="pro"><strong>{{totaleDeceduti}}</strong></th>
                   </tr>
                 </thead>
                 <!-- TABELLA DATI -->
                 <tbody>
                   <tr>
                     <td class="collapsible-section-header" colspan="3">
-                      <a data-toggle="collapse" >Monitoraggio Sanitario</a>
+                      <p>Monitoraggio Sanitario</p>
                     </td>
                   </tr>
                   <tr>
                     <td class="no-padding" colspan="3">
                       <div id="collapse_section_one" class="collapse in">
-                        <table style="width:100%">
+                        <table>
                           <tr>
                             <td>Isolamento domiciliare</td>
                             <td>{{ isolamentoDomiciliare }}</td>

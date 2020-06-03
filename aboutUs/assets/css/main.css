@@ -548,11 +548,10 @@
 		}
 
 		#header .logo {
-			color: #ffffff;
 			display: inline-block;
 			font-weight: 400;
-			height: inherit;
-			left: 0;
+			height: 80px;
+			left: 15%;
 			line-height: inherit;
 			margin: 0;
 			padding: 0;
@@ -784,7 +783,15 @@
 				#banner .flex div p {
 					margin: 0;
 				}
-
+		
+		#banner .logo{
+			height: 100px;
+			left: 0;
+			line-height: inherit;
+			margin: 0;
+			padding: 0;
+			top: 0;
+		}
 /* Footer */
 
 	#footer {
