@@ -42,8 +42,6 @@ $(document).ready(function(){
             $('.register-show input[type="password"]').css('border', '1px solid red');
         }
     }); 
-    $('#error_email').hide();
-    $('#error_password').hide();
 });
 
 function validaRegistrazione(){

@@ -285,6 +285,19 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   background: #555; 
 }
 
+.listaRegioni .list-group-item:hover{
+  background-color: rgb(235,184,29);
+}
+
+
+.listaRegioni .list-group-item:active{
+  background-color: rgb(153, 117, 8);
+}
+
+.listaRegioni .list-link{
+  text-decoration: none;;
+}
+
 .area {
   display: block;
   position: relative;

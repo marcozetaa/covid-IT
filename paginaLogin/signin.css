@@ -36,6 +36,30 @@ a{
     z-index:0;
     box-shadow: 0 0 10px 9px #00000096;
 }
+
+.white-panel-reg{
+  background-color: rgba(255,255, 255, 1);
+  border: 3px solid rgba(3,104,139);
+  height: 300px;
+  width: 500px;
+  position: absolute;
+  right: 35%;
+  top: 25%;
+  transition:.3s ease-in-out;
+  box-shadow: 0 0 10px 9px rgb(3, 71, 94);
+}
+
+.white-panel-reg .titolo{
+  font-size: 200%;
+  text-align: center;
+  padding: 5%;
+}
+
+.white-panel-reg .description{
+  font-size: 150%;
+  text-align: center;
+}
+
 .login-reg-panel input[type="radio"]{
     position:relative;
     display:none;
@@ -55,6 +79,21 @@ a{
     font-weight: 600;
     font-size: 18px;
 }
+
+.login-reg-panel #label-login:hover{
+    color: rgba(2, 71, 94, 0.9);
+    border:1px solid rgba(2, 71, 94, 0.9);
+    background-color: #9E9E9E;
+    
+}
+
+.login-reg-panel #label-register:hover{
+  color: rgba(2, 71, 94, 0.9);
+  border:1px solid rgba(2, 71, 94, 0.9);
+  background-color: #9E9E9E;
+  
+}
+
 .login-info-box{
     width:30%;
     padding:0 50px;
@@ -116,7 +155,7 @@ a{
 .login-btn-show {
     max-width: 150px;
     width: 100%;
-    background: #444444;
+    background: rgb(240, 181, 0);
     color: #f9f9f9;
     border: none;
     padding: 10px;
@@ -152,7 +191,7 @@ a{
 .reg-btn-show {
     max-width: 150px;
     width: 100%;
-    background: #444444;
+    background: rgb(240, 181, 0);
     color: #f9f9f9;
     border: none;
     padding: 10px;
@@ -292,103 +331,26 @@ a{
   }
 }
 
-/*
-.select-box {
-    position: relative;
-    display: block;
-    width: 100%;
-    margin: 12px 0;
-    font-family: 'Mukta', sans-serif;
-    font-size: 15px;
-    border: 1px solid #b5b5b5;
-    color: #60666d;
-    
+/* CSS PER MODAL BOX PROVENIENTE DA SERVER /
+/ The Modal (background) /
+.modal {
+    display: block; / Hidden by default /
+    position: fixed; / Stay in place /
+    z-index: 1; / Sit on top /
+    left: 0;
+    top: 0;
+    width: 100%; / Full width /
+    height: 100%; / Full height /
+    overflow: auto; / Enable scroll if needed /
+    background-color: rgb(0,0,0); / Fallback color /
+    background-color: rgba(0,0,0,0.4); / Black w/ opacity /
   }
 
-.select-box__current {
-  position: relative;
-  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  outline: none;
-}
-
-.select-box__current:focus + .select-box__list {
-  opacity: 1;
-  float: left;
-  width: 100%;
-  overflow: auto;
-  height: 100px;
-  -webkit-animation-name: none;
-          animation-name: none;
-}
-
-.select-box__current:focus + .select-box__list .select-box__option {
-  cursor: pointer;
-}
-.select-box__current:focus .select-box__icon {
-  -webkit-transform: translateY(-50%) rotate(180deg);
-          transform: translateY(-50%) rotate(180deg);
-}
-.select-box__icon {
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 20px;
-  opacity: 0.3;
-  -webkit-transition: 0.2s ease;
-  transition: 0.5s ease;
-}
-.select-box__value {
-  display: -webkit-box;
-  display: flex;
-}
-.select-box__input {
-  display: none;
-}
-.select-box__input:checked + .select-box__input-text {
-  display: block;
-}
-.select-box__input-text {
-  display: none;
-  width: 100%;
-  margin: 0;
-  padding: 15px;
-  background-color: #fff;
-}
-
-.select-box__option {
-  display: block;
-  padding: 15px;
-  background-color: #f9f9f9;
-}
-.select-box__option:hover, .select-box__option:focus {
-  color: #546c84;
-  background-color: #fbfbfb;
-}
-
-@-webkit-keyframes HideList {
-  from {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
+  / Modal Content/Box /
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; / 15% from the top and centered /
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; / Could be more or less, depending on screen size 
   }
-  to {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-  }
-}
-
-@keyframes HideList {
-  from {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-  to {
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-  }
-}
-*/
-
-  

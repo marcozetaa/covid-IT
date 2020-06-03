@@ -5,7 +5,7 @@ var italia = new Vue({
             loading: true,
             error: false,
             italia: [],
-            regioni: []
+            regioni: [],
         };
     },
 
@@ -20,7 +20,6 @@ var italia = new Vue({
         ora: function() {
             var data = this.italia.data+'';
             var res = data.split("T");
-            console.log("ora: "+ res[1]);
             return res[1];
         },
 
@@ -91,9 +90,7 @@ var italia = new Vue({
             this.loading=false
         });
         axios.get('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni-latest.json')
-        .then(response => {
-            console.log(response.data);
-                this.regioni = response.data})
+        .then(response => {this.regioni = response.data})
         .catch(error => {
             console.log(error)
             this.errored=true;

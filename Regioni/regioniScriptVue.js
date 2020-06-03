@@ -5,7 +5,7 @@ var regione = new Vue({
             loading: true,
             errored: false,
             show: true,
-            regioneSelezionata: 0,
+            regioneSelezionata: this.getRegioneid(), 
             regioni: [],
             immagini: [
                 {id:0, image:'regioniFoto/abruzzo.png'},
@@ -33,6 +33,12 @@ var regione = new Vue({
         };
     },
     methods: {
+        getRegioneid: function() {
+            let urlParams = new URLSearchParams(window.location.search);
+            let param = urlParams.get('id');
+            if(!param) return 0;
+            else return param;
+        },
         showRegione: function(i){
             this.loading=true;
             setTimeout(() => {

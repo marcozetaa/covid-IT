@@ -23,9 +23,10 @@
         <a href="index.html" class="logo">logo</a>
         <nav id="nav">
           <a href="../Regioni/regioni.html">Regioni</a>
+          <a href="../aboutUs/aboutUs.html">About Us</a>
           <a href="../paginaLogin/login.php"><span class="glyphicon glyphicon-user"></span>Sign in</a>
         </nav>
-      </div>
+      </div>1
     </header>
 
     <div id="inner">
@@ -94,11 +95,15 @@
               </h2>
             </div>
           </div>
-          <div id="areaReg" class="listaRegioni scrollbar">
-            <ul v-for="(x,index) in regioni" class="list-group" tabindex="0">
-                <li class="list-group-item" id="nome">
-                <span class="badge" style="background-color: #004c68;" id="totale">{{x.totale_positivi}}</span>
-                {{x.denominazione_regione}}</li>
+          <h3 style="text-align: center; color: rgb(235,184,29);">TOTALE POSITIVI</h3>
+          <div id="areaReg" class="listaRegioni scrollbar"> 
+            <ul class="list-group" tabindex="0">
+              <li v-for="(x,index) in regioni" class="list-group-item" :id=index >
+                <a id="link_regioni" class="list-link" v-bind:href="'../Regioni/regioni.html?id='+index">
+                  {{x.denominazione_regione}}
+                  <span class="badge" style="float:right; background-color: #004c68;" id="totale">{{x.totale_positivi}}</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -114,7 +119,8 @@
           <canvas id="myChartG" width='100%' height="70%">{{ trendGuariti }}</canvas>
       </div>
     </div>
-    
+
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="home.js"></script>
     <script type="text/javascript" src="sketch.js"></script>

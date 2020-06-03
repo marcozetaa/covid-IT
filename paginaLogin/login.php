@@ -1,3 +1,6 @@
+<?php
+  include('../server.php');
+?>
 
 <html>
     <head>
@@ -26,10 +29,10 @@
         </div>        
         <div class="white-panel">
             <div class="login-show">
-              <form id="form-login"action="validateLogin.php" method="post" name="form-login">
+              <form id="form-login" action="../server.php" method="post" name="form-login">
                 <h2>LOGIN</h2>
-                <p id="error_email">email_error</p>
-                <p id="error_password">password_error </p>
+                <p id="error_email">Errore: la mail non è registrata</p>
+                <p id="error_password">Password non corretta</p>
                 <input name="login_email" type="email" placeholder="Email" required>
                 <input name="login_password" type="password" placeholder="Password" required>
                 <button class="login-btn-show" name="loginButton" type="submit">Log in</button>
@@ -37,7 +40,7 @@
               </form>
             </div>
             <div class="register-show">
-              <form id="form-register" action="validateRegistration.php" method="post" name="form-register" onsubmit="return validaRegistrazione()">
+              <form id="form-register" action="../server.php" method="post" name="form-register" onsubmit="return validaRegistrazione()">
                 <h2>REGISTER</h2>
                 <input name="input_nome" type="text" placeholder="Nome" required>
                 <input name="input_cognome"type="text" placeholder="Cognome" required>
@@ -195,6 +198,19 @@
             </div>
           </div>
       </div>
+      <script>
+        var mail="<?php if(isset($_SESSION['error_posta'])) echo $_SESSION['error_posta'];?>";
+        var pass="<?php if(isset($_SESSION['error_codice'])) echo $_SESSION['error_codice'];?>";
+        if(mail==1){
+          $('#error_email').show();  
+          <?php $_SESSION['error_posta']=0; ?>
+        }
+        else $('#error_email').hide();
+        if(pass==1){
+          $('#error_password').show();
+          <?php $_SESSION['error_codice']=0;?>
+        }      
+        else $('#error_password').hide();
+      </script>
     </body>
 </html>  
-
