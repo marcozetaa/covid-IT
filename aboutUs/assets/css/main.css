@@ -578,9 +578,6 @@
 			font-size: 1em;
 		}
 
-			/*#header a:hover {
-				color: rgb(235,184,29);
-			}*/
 
 			#header a:last-child {
 				padding-right: 0;
@@ -684,16 +681,25 @@
 	-webkit-animation-duration: 0.5s;
 	animation-name: fade;
 	animation-duration: 5s;
+	transition-duration: 10s;
 	}
 
 	@-webkit-keyframes fade {
-	from {opacity: .4} 
-	to {opacity: 1}
+		0% {
+			opacity:1;
+		  }
+		  100% {
+			opacity:0;
+		  }
 	}
 
 	@keyframes fade {
-	from {opacity: .4} 
-	to {opacity: 1}
+		0% {
+			opacity:1;
+		  }
+		  100% {
+			opacity:0;
+		  }
 	}
 
 /* Banner */

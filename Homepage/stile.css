@@ -60,9 +60,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 1em;
   }
 
-    /*#header a:hover {
-      color: rgb(235,184,29);
-    }*/
 
     #header a:last-child {
       padding-right: 0;
