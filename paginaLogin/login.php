@@ -15,6 +15,18 @@
       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
     <body>
+
+      <!-- Header -->
+      <header id="header">
+        <div class="inner">
+          <nav id="nav">
+            <a class="navbar" href="../Homepage/homepage.html">Homepage</a>
+            <a class="navbar" href="../Regioni/regioni.html">Regioni</a>
+            <a class="navbar" href="../aboutUs/aboutUs.html">About Us</a>
+          </nav>
+        </div>
+      </header>
+
       <div class="login-reg-panel">
         <div class="login-info-box">
           <h2>Hai già un account?</h2>

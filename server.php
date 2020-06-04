@@ -29,9 +29,9 @@
                 $url .= $valori['nome'];
                 $url .= "&regione=";
                 $url .= $valori['regione'];
-                echo $valori["nome"];
-                echo $url;
                 $_SESSION['logged-user']=1;
+                $_SESSION['username']=$valori['nome'];
+                $_SESSION['regione']=$valori['regione'];
                 header("Location: ".$url);
             }
         }

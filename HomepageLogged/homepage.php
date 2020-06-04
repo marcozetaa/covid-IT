@@ -32,11 +32,8 @@
       <img class="logo" src="../Logo.jpg"> 
       <div class="inner">
         <nav id="nav">
-          <a class="navbar" href="../Regioni/regioni.html">Regioni</a>
-          <a class="navbar" href="../aboutUs/aboutUs.html">About Us</a>
-          <a id="nav-user" class="navbar" href="#"></a>
-          <a class="navbar" href="../Homepage/homepage.html">Log out</a>
-          
+          <a id="nav-user" class="navbar" href="#">Ciao, <?php echo $_SESSION['username']?></a>
+          <a name="log-out" class="navbar" href="../Homepage/homepage.html">Log out</a>
         </nav>
       </div>
     </header>
@@ -128,8 +125,7 @@
               </li>
               <li class="list-group-item">
                 Nuovi Positivi
-                <span class="badge" style="float:right; background-color: #004c68;" id="totale">{{reg_variazioneTotalePositivi}}</span>
-                <span class="badge" style="float:right; background-color: #004c68;" id="totale">{{reg_nuoviPositivi}}</span>
+                <span class="badge" style="float:right; background-color: #004c68;" id="totale">{{reg_nuoviPositivi}} ({{reg_variazioneTotalePositivi}})</span>
               </li>
               <li class="list-group-item">
                 Ricoverati Con Sintomi
@@ -171,13 +167,6 @@
       </div>
     </div>
 
-
-    <script>
-      let urlParams = new URLSearchParams(window.location.search);
-      var nome = urlParams.get('nome');
-      var htmlString = "Ciao, "+ nome[0].toUpperCase() + nome.slice(1);
-      $("#nav-user").html(htmlString);  
-    </script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="home.js"></script>
     <script type="text/javascript" src="sketch.js"></script>

@@ -140,7 +140,6 @@ var italia = new Vue({
                 if(response.data[i].denominazione_regione == reg)
                     index = i;
             }
-            console.log(response.data[index]);
             this.regioni = response.data[index]})
         .catch(error => {
             console.log(error)
