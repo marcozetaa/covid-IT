@@ -68,7 +68,7 @@
 					<div class="flex flex-2">
 						<article>
 							<div class="image round">
-								<img src="images/pic01.jpg" alt="Pic 01" />
+								<img src="images/marco.jpeg" alt="Pic 01" />
 							</div>
 							<header>
 								<h3>Marco Zanghieri<br />Ingegnere informatico</h3>
@@ -80,7 +80,7 @@
 						</article>
 						<article>
 							<div class="image round">
-								<img src="images/pic02.jpg" alt="Pic 02" />
+								<img src="images/benedetta.jpg" alt="Pic 02" />
 							</div>
 							<header>
 								<h3>Benedetta Zelada<br />Ingegnere Informatico</h3>
