@@ -1,12 +1,10 @@
 <?php
-/*
   include('../server.php');
   if(!isset($_SESSION['logged-user']) || $_SESSION['logged-user']!=1){
     header("Location:../paginaLogin/login.php");
   }
   else
     $_SESSION['logged-user']=0;
-    */
 ?>
 
 
