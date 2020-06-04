@@ -43,9 +43,8 @@
         $q1 = "SELECT * FROM user_registration WHERE email=$1";
         $result=pg_query_params($dbconnect, $q1, array($email));
         if($line=pg_fetch_array($result,null,PGSQL_ASSOC)){
-            phpAlert("stocazzo");
-            echo "<h1> Sei già registrato </h1>
-            <a href=login.html> Click here to login </a>";
+            $_SESSION['mail_exists']=1;
+            header("Location: paginaLogin/login.php");
         }
         else{
             $nome = $_POST['input_nome'];
@@ -56,7 +55,8 @@
             $q2 = "INSERT INTO user_registration VALUES (DEFAULT,$1,$2,$3,$4,$5)";
             $data = pg_query_params($dbconnect, $q2, array($nome,$cognome,$regione,$password,$email));
             if($data){
-                header("Location: paginaLogin/registrationSuccess.html");
+                $_SESSION['reg_success']=1;
+                header("Location: paginaLogin/login.php");
             }
         }
     } 
@@ -75,29 +75,5 @@
         }
     }
 
-    function phpAlert($msg) {
-        echo '<div id="myModal" class="modal">
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <p style="color:black;">"'.$msg.'"</p>
-        </div>
-      </div>
-      <script>
-        // PRENDE IL MODAL
-        var modal = document.getElementById("myModal");
-        // PRENDE ELEMENTO SPAN PER CHIUDERE IL PULSANTE X
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick = function() {
-          modal.style.display = "none";
-        }
-        // SE UTENTE PREME SU QUALSIASI PUNTO CHE NON SIA X CHIUDI UGUALMENTE
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
-          }
-      }
-      </script>';
-      }
 ?>
 

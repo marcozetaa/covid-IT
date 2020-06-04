@@ -4,7 +4,7 @@
 
 <html>
     <head>
-      <title>EsercitazioneLab - Pagina di Login</title>
+      <title>Login</title>
       <meta charset="utf-8"/>
       <link href="../css/bootstrap.min.css" rel="stylessheet"/>
       <link href="signin.css" rel="stylesheet"/>
@@ -12,6 +12,7 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script type="text/javascript" lang="javascript" src="../js/bootstrap.min.js"></script>
       <script type="text/javascript" lang="javascript" src="./loginScript.js"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
     <body>
       <div class="login-reg-panel">
@@ -33,6 +34,10 @@
                 <h2>LOGIN</h2>
                 <p id="error_email">Errore: la mail non è registrata</p>
                 <p id="error_password">Password non corretta</p>
+                <p id="reg_success" style="border: 1px solid #d7fcc2; background-color: #e4fce7; color: #22cc00;">
+                  Registrazione effettuata! Ora accedi al sito
+                </p>
+                <p id="mail_exists">L'email è gia registrata!</p>
                 <input name="login_email" type="email" placeholder="Email" required>
                 <input name="login_password" type="password" placeholder="Password" required>
                 <button class="login-btn-show" name="loginButton" type="submit">Log in</button>
@@ -192,7 +197,7 @@
                 </div>
                 <input name="first_pass" id="first_pass" type="password" placeholder="Password" required>
                 <input name="confirm_pass" id="confirm_pass" type="password" placeholder="Confirm Password" required>
-                <button class="reg-btn-show" name="RegisterButton" type="submit">Register</button>
+                <button id="reg-btn" class="reg-btn-show" name="RegisterButton" type="submit">Register</button>
               </form>
             </div>
           </div>
@@ -200,6 +205,8 @@
       <script>
         var mail="<?php if(isset($_SESSION['error_posta'])) echo $_SESSION['error_posta'];?>";
         var pass="<?php if(isset($_SESSION['error_codice'])) echo $_SESSION['error_codice'];?>";
+        var reg="<?php if(isset($_SESSION['reg_success'])) echo $_SESSION['reg_success'];?>";
+        var exists="<?php if(isset($_SESSION['mail_exists'])) echo $_SESSION['mail_exists'];?>";
         if(mail==1){
           $('#error_email').show();  
           <?php $_SESSION['error_posta']=0; ?>
@@ -210,6 +217,16 @@
           <?php $_SESSION['error_codice']=0;?>
         }      
         else $('#error_password').hide();
+        if(reg==1){
+          $('#reg_success').show();
+          <?php $_SESSION['reg_success']=0;?>
+        }      
+        else $('#reg_success').hide();
+        if(exists==1){
+          $('#mail_exists').show();
+          <?php $_SESSION['mail_exists']=0;?>
+        }      
+        else $('#mail_exists').hide();
       </script>
     </body>
 </html>  

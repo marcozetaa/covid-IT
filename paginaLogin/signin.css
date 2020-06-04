@@ -139,7 +139,9 @@ a{
 }
 
 .login-show #error_email,
-.login-show #error_password{
+.login-show #error_password,
+.login-show #reg_success,
+.login-show #mail_exists{
   display: block;
   background-color: #fce4e4;
   border: 1px solid #fcc2c3;

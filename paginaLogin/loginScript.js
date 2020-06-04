@@ -42,15 +42,20 @@ $(document).ready(function(){
             $('.register-show input[type="password"]').css('border', '1px solid red');
         }
     }); 
+
 });
 
 function validaRegistrazione(){
+    var form = $(this).parents('form');
     var pass1 = $('#first_pass').val();
     var pass2 = $('#confirm_pass').val();
     if(pass1 != pass2){
-        alert("Errore: le password non coincidono");
-        return false;
-    }
+          swal({
+              title: "Errore",
+              text: "Le password non coincidono"
+            });
+          return false;
+        }
     return true;
-};
+}
     
