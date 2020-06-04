@@ -1,0 +1,344 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+#header {
+  color: #fff;
+  cursor: default;
+  padding: 30px;
+  margin: 2px;
+  height: 3.25em;
+  left: 0;
+  line-height: 3.25em;
+  text-align: right;
+  top: 2em;
+  width: 100%;
+  z-index: 10001;
+}
+
+  #header .inner {
+    margin: 0 auto;
+    position: relative;
+  }
+
+  #header .logo {
+    height: 14%;
+    display: inline-block;
+    left: 50px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  #header a {
+    -moz-transition: color 0.2s ease-in-out;
+    -webkit-transition: color 0.2s ease-in-out;
+    -ms-transition: color 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out;
+    display: inline-block;
+    padding: 0 0.75em;
+    color: inherit;
+    text-decoration: none;
+    font-size: 1em;
+  }
+
+
+    #header a:last-child {
+      padding-right: 0;
+    }
+
+    #header a.navPanelToggle {
+      display: none;
+      text-decoration: none;
+      height: 4em;
+      width: 4em;
+      z-index: 10003;
+    }
+
+      #header a.navPanelToggle .fa {
+        font-size: 1.25em;
+      }
+
+      @media screen and (max-width: 980px) {
+
+        #header a.navPanelToggle {
+          display: inline-block;
+        }
+
+      }
+
+    @media screen and (max-width: 736px) {
+
+      #header a {
+        padding: 0 0.5em;
+      }
+
+    }
+
+@media screen and (max-width: 980px) {
+
+  #header {
+    top: 1em;
+  }
+
+}
+
+@media screen and (max-width: 736px) {
+
+  #header {
+    top: .5em;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+
+  #header {
+    font-size: .9em;
+  }
+
+}
+
+  /* LAYOUT */
+    
+#inner {
+  padding: 5px;
+  margin: 40px;
+  border-top: 1px solid rgb(255,255,255);
+  border-top-width: 1px;
+}
+
+.andamento{
+  background-color: #f1f1f1;
+  text-align: center;
+  font-size: 25px;
+}
+
+*{
+  box-sizing: border-box;
+}
+/* Create three unequal columns that floats next to each other */
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 100%; 
+}
+
+/* Left and right column */
+.left {
+  width: 20%;
+}
+
+.right {
+  width: 40%;
+}
+
+/* Middle column */
+.middle {
+  width: 40%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lista{
+  list-style-type: disc;
+}
+
+/*Stile per il pannello sinistro*/
+.infoTile {
+  margin-bottom: 30px;
+  border-bottom: #DDD 1px solid;
+  color: white;
+}
+
+.infoTileHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.infoTile .title {
+  margin-bottom: 0px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.infoTile .lastUpdate {
+  font-size: 13px;
+  color: #fff4d3;
+  line-height: 20px;
+}
+
+.infoTile .confirmed {
+  font-size: 32px;
+  color: rgb(240, 181, 0);
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.infoTileData {
+  padding-bottom: 10px;
+}
+
+.infoTile .moreinfo{
+  position: relative;
+}
+
+.legend:first-child {
+  padding-top: 12px;
+}
+
+.legend {
+  padding-top: 16px;
+}
+
+.legend {
+  display: grid;
+  padding-top: 16px;
+  grid-template-columns: 8px auto min-content;
+  align-items: center;
+  grid-gap: 16px 8px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.legend .color {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+}
+
+
+.legend .description {
+  font-weight: 600;
+}
+
+.legend .total {
+  color: rgb(240, 181, 0);
+  display: flex;
+  align-items: center;
+}
+
+[dir="ltr"] .legend .delta {
+  margin-left: 8px;
+}
+
+.legend .delta {
+  text-align: right;
+  font-size: 11px;
+  line-height: 15px;
+  background-color: #004c68;
+  border-radius: 2px;
+  padding: 1px 4px 2px 4px;
+  font-weight: 600;
+}
+
+.listaRegioni {
+  width: 80%;
+  height: 50%;
+}
+
+/* width */
+.listaRegioni ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.listaRegioni ::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.listaRegioni ::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.listaRegioni ::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.listaRegioni .list-group-item:hover{
+  background-color: rgb(235,184,29);
+}
+
+
+.listaRegioni .list-group-item:active{
+  background-color: rgb(153, 117, 8);
+}
+
+.listaRegioni .list-link{
+  text-decoration: none;;
+}
+
+.area {
+  display: block;
+  position: relative;
+  background: #FFF;
+  border: 1px solid #00809D;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 10px 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.area:hover{
+  box-shadow: 0px 3px 5px #004c68;
+  background-color: rgb(235,184,29);
+  border: 1px solid rgb(127,51,0);
+}
+
+.area #nome{
+  text-align: left;;
+}
+
+.area #total{
+  text-align: center;
+}
+
+#areaReg {
+  background-color: #09688b;
+  width: 100%;
+  height: 850px;
+}
+
+.scrollbar {
+  overflow: auto;
+}
+
+#areaReg::-webkit-scrollbar{  
+  width:5px;
+  background-color:#cccccc;
+} 
+
+#areaReg::-webkit-scrollbar-thumb{
+  background-color:rgb(240, 181, 0);
+  border-radius:10px;
+}
+
+#areaReg::-webkit-scrollbar-thumb:hover{
+  background-color:rgb(235,184,29);
+  border:1px solid rgba(240, 184, 18, 0.048);
+}
+
+#areaReg::-webkit-scrollbar-thumb:active{
+  background-color:rgb(235, 163, 29);
+  border:1px solid rgba(240, 184, 18, 0.048);
+} 

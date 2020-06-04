@@ -17,13 +17,22 @@
         }
         else{
             $db_password = $line['password'];
-            echo $db_password;
             if($password != $db_password){
                 $_SESSION['error_codice']=1;
                 header("Location: paginaLogin/login.php");
             }
             else{
-                echo('<h1>porcodio</h1>'); 
+                $q_log = "SELECT nome,regione from user_registration WHERE email=$1";        
+                $result=pg_query_params($dbconnect, $q_log, array($email));
+                $valori=pg_fetch_array($result,null,PGSQL_ASSOC);
+                $url = "HomepageLogged/Homepage.php?nome=";
+                $url .= $valori['nome'];
+                $url .= "&regione=";
+                $url .= $valori['regione'];
+                echo $valori["nome"];
+                echo $url;
+                $_SESSION['logged-user']=1;
+                header("Location: ".$url);
             }
         }
     }
