@@ -68,24 +68,24 @@
 					<div class="flex flex-2">
 						<article>
 							<div class="image round">
-								<img src="images/marco.jpeg" alt="Pic 01" />
+								<img src="images/pic01.jpg" alt="Pic 01" />
 							</div>
 							<header>
 								<h3>Marco Zanghieri<br />Ingegnere informatico</h3>
 							</header>
-							<p>Morbi in sem quis dui placerat ornare. Pellentesquenisi<br />euismod in, pharetra a, ultricies in diam sed arcu. Cras<br />consequat  egestas augue vulputate.</p>
+							<p>Studente di Ingegneria Informatica alla Sapienza</p>
 							<footer>
 								<a href="https://www.instagram.com/marcozeta.jpeg/" class="button">Instagram</a>
 							</footer>
 						</article>
 						<article>
 							<div class="image round">
-								<img src="images/benedetta.jpg" alt="Pic 02" />
+								<img src="images/pic02.jpg" alt="Pic 02" />
 							</div>
 							<header>
 								<h3>Benedetta Zelada<br />Ingegnere Informatico</h3>
 							</header>
-							<p>Pellentesque fermentum dolor. Aliquam quam lectus<br />facilisis auctor, ultrices ut, elementum vulputate, nunc<br /> blandit ellenste egestagus commodo.</p>
+							<p>Studentessa di Ingegneria Informatica alla Sapienza</p>
 							<footer>
 								<a href="https://www.instagram.com/benedettazelada/" class="button">Instagram</a>
 							</footer>
