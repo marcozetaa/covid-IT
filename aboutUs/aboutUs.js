@@ -21,10 +21,10 @@ function showSlides() {
 
 function valida(){
   if((document.mess.name.value=="") || (document.mess.email.value=="")){
-    alert("Inserire il nome e la email");
+    swal("Devi inserire nome e email!","Non hai mandato il messaggio", "error");
     return false;
   }
 
-  alert("Dati inseriti correttamente");
+  swal("Dati inseriti correttamente!","Hai mandato il messaggio", "success");
   return true;
 }
