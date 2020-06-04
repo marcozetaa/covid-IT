@@ -22,7 +22,7 @@
           <nav id="nav">
             <a class="navbar" href="../Homepage/homepage.html">Homepage</a>
             <a class="navbar" href="../Regioni/regioni.html">Regioni</a>
-            <a class="navbar" href="../aboutUs/aboutUs.html">About Us</a>
+            <a class="navbar" href="../aboutUs/aboutUs.php">About Us</a>
           </nav>
         </div>
       </header>
