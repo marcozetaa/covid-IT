@@ -36,7 +36,6 @@
                 <input name="login_email" type="email" placeholder="Email" required>
                 <input name="login_password" type="password" placeholder="Password" required>
                 <button class="login-btn-show" name="loginButton" type="submit">Log in</button>
-                <a href="">Password dimenticata?</a>
               </form>
             </div>
             <div class="register-show">

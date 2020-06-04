@@ -37,7 +37,7 @@
   <div id="component-regione" class="row" style="background-color: #09688b;">
     <transition name="fade">
       <section key="1" v-if="errored">
-        <p>C'è un problema nel ricevere i dati in qeusto momento, ci scusiamo per il disagio</p>
+        <p>C'è un problema nel ricevere i dati in questo momento, ci scusiamo per il disagio</p>
         <img v-bind:src="image"></img>
       </section>
       <div key="2" v-else-if="loading"  class="lds-ripple">
@@ -59,7 +59,7 @@
                   </tr>
                   <tr class="data-bottom-heading small">
                     <th class="free"><strong>{{totaleCasi}}</strong></th>
-                    <th class="basic"><strong>{{nuoviPositivi}}<div id='variazione' v-bind:style="{color: computeColor}">({{variazioneTotalePositivi}})</div></th>
+                    <th class="basic"><strong>{{nuoviPositivi}}<div id='variazione' v-bind:style="{color: computeColor}">({{variazioneTotalePositivi}})</div></strong></th>
                     <th class="pro"><strong>{{totaleDeceduti}}</strong></th>
                   </tr>
                 </thead>
@@ -76,31 +76,31 @@
                         <table>
                           <tr>
                             <td>Isolamento domiciliare</td>
-                            <td>{{ isolamentoDomiciliare }}</td>
+                            <td><span class="badge" style="float:right; background-color: #004c68;" id="totale">{{ isolamentoDomiciliare }}</span></td>
                           </tr>
                           <tr>
                             <td>Totale ospedalizzati</td>
-                            <td>{{ totaleOspedalizzati }}</td>
+                            <td><span class="badge" style="float:right; background-color: #004c68;" id="totale">{{ totaleOspedalizzati }}</span></td>
                           </tr>
                           <tr>
                             <td>Ricoverati con sintomi</td>
-                            <td>{{ ricoveratiConSintomi }}</td>
+                            <td><span class="badge" style="float:right; background-color: #004c68;" id="totale">{{ ricoveratiConSintomi }}</span></td>
                           </tr>
                           <tr>
                             <td>Terapia intensiva</td>
-                            <td>{{ terapiaIntensiva }}</td>
+                            <td><span class="badge" style="float:right; background-color: #004c68;" id="totale">{{ terapiaIntensiva }}</span></td>
                           </tr>
                           <tr>
                             <td>Dimessi guariti</td>
-                            <td>{{ dimessiGuariti }}</td>
+                            <td><span class="badge" style="float:right; background-color: #004c68;" id="totale">{{ dimessiGuariti }}</span></td>
                           </tr>
                           <tr>
                             <td>Tamponi</td>
-                            <td>{{ totaleTamponi }}</td>
+                            <td><span class="badge" style="float:right; background-color: #004c68;" id="totale">{{ totaleTamponi }}</span></td>
                           </tr>
                           <tr>
                             <td>Note</td>
-                            <td>{{ noteIT }}</td>
+                            <td><span class="badge" style="float:right; background-color: #004c68;" id="totale">{{ noteIT }}</span></td>
                           </tr>
                         </table>
                       </div>

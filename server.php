@@ -4,6 +4,7 @@
     $dbconnect = pg_connect("host=localhost port=5432 dbname=Dati_Covid user=postgres password=postgres") 
     or die("could not connect: " . preg_last_error());
 
+    //Evento di login
     if(isset($_POST['loginButton'])) {
         $email = $_POST['login_email'];
         $password = md5($_POST['login_password']);
@@ -27,6 +28,7 @@
         }
     }
 
+    //Evento di registrazione
     if(isset($_POST['RegisterButton'])){
         $email = $_POST['input_email'];
         $q1 = "SELECT * FROM user_registration WHERE email=$1";
@@ -49,6 +51,20 @@
             }
         }
     } 
+
+    //Evento di messaggio
+    if(isset($_POST['messageButton'])) { 
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $message = $_POST['message'];
+        $q1 = "INSERT INTO contact_messages VALUES (DEFAULT,$1,$2,$3)";
+        $result=pg_query_params($dbconnect, $q1, array($name,$email,$message));
+        if($result){
+            echo "<h1> Messaggio inviato!<br/></h1>";
+            echo "<a href=../Homepage/homepage.html> Premi qui </a>
+            per iniziare ad utilizzare il sito web";
+        }
+    }
 
     function phpAlert($msg) {
         echo '<div id="myModal" class="modal">
