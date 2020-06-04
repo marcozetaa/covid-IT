@@ -20,7 +20,7 @@ function showSlides() {
 
 
 function valida(){
-  if((document.mess.name.value=="") && (document.mess.email.value=="")){
+  if((document.mess.name.value=="") || (document.mess.email.value=="")){
     alert("Inserire il nome e la email");
     return false;
   }
