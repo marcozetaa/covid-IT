@@ -43,11 +43,26 @@ function setup(){
 
     datarray = json2array(mapdata);
 
+    var max_n = 0;
+    for(var i=0; i<datarray.length; i++){
+        if (max_n < mapdata[i].totale_positivi)
+            max_n = mapdata[i].totale_positivi;
+    }
+
+   // console.log("numero max: ", max_n)
+
     for(var i=0; i<datarray.length; i++){
 
         var lat = mapdata[i].lat;
         var long = mapdata[i].long;
-        var positivi = sqrt(mapdata[i].totale_positivi)/1.5;
+        var positivi = mapdata[i].totale_positivi/max_n;
+
+        if( screen.width < 575)
+            var costant_gap = (screen.width*0.4)/2;
+        else
+            var costant_gap = (screen.width*0.4)/7;
+
+        positivi = positivi * costant_gap;
 
         var x = mercatoreX(long) - cx;
         var y = mercatoreY(lat) - cy;

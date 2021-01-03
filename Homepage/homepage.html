@@ -16,22 +16,28 @@
   </head>
   <body style="background-color: #09688b;" onload="assegnaEvent();">
 
-		<!-- Header -->
-    <header id="header">
-      <img class="logo" src="../Logo.jpg"> 
-      <div class="inner">
-        <nav id="nav">
-          <a class="navbar" href="../Regioni/regioni.html">Regioni</a>
-          <a class="navbar" href="../aboutUs/aboutUs.html">About Us</a>
-          <a class="navbar" href="../paginaLogin/login.php"><span class="glyphicon glyphicon-user"></span>Sign in</a>
+    <header>
+      <div style="height: 100px;">
+        <img id="logo" class="logo" src="../Logo.jpg">
+        <h1 class="title"><b>COVID-19 ITALIA</b></h1>
+        <nav>
+          <ul>
+            <li><a href="../Regioni/regioni.html">Regioni</a>
+            </li>
+            <li><a href="../aboutUs/aboutUs.html">About Us</a>
+            </li>
+          </ul>
         </nav>
       </div>
     </header>
-
+    
     <div id="inner">
+      <div class="disclaimer">Tutti i dati utilizzati sono messi a disposizione dal Dipartimento di Protezione Civile, 
+                              utili ai soli fini comunicativi e di informazione, 
+                              aggiornati quotidianamente alle 18:30 (successivamente alla conferenza stampa del Capo Dipartimento)</div>
       <!--LAYOUT-->
       <div id="ultimi_dati">
-        <div class="column left">
+        <div id="legenda_dati" class="column left">
           <div class="infoTile">
             <div class="lastUpdate">Aggiornato il {{ giorno }} alle {{ ora }}</div>
             <h2 class="title" title="Totale casi confermati">Totale casi confermati</h2>
@@ -41,7 +47,7 @@
               <div class="description">Nuovi positivi</div>
               <div class="total">
                 {{ nuoviPositivi }}
-                <div class="delta"> {{ varPositivi }}</div>
+                <div class="delta" v-bind:style="{color: computeColor}"> {{ varPositivi }}</div>
               </div>
             </h2>
             <h2 class="legend">
@@ -119,7 +125,16 @@
       </div>
     </div>
 
-
+    <script>
+      function resize(id){
+        if(screen.width < 575)
+          document.getElementById(id).width = screen.width+"px";
+        else
+        document.getElementById(id).width = "100%";
+      }
+      resize("legenda_dati");
+      resize("graf");
+    </script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="home.js"></script>
     <script type="text/javascript" src="sketch.js"></script>

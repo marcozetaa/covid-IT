@@ -45,6 +45,7 @@ var italia = new Vue({
 
         varPositivi: function(){
             var pos = this.italia.variazione_totale_positivi;
+            if(pos > 0) pos = "+" + pos;
             return pos;
         },
 

@@ -10,22 +10,22 @@ var regione = new Vue({
             immagini: [
                 {id:0, image:'regioniFoto/abruzzo.png'},
                 {id:1, image:'regioniFoto/basilicata.png'},
-                {id:2, image:'regioniFoto/trentino-alto-adige.png'},
-                {id:3, image:'regioniFoto/calabria.png'},
-                {id:4, image:'regioniFoto/campania.png'},
-                {id:5, image:'regioniFoto/emilia-romagna.png'},
-                {id:6, image:'regioniFoto/friuli-venezia-giulia.png'},
-                {id:7, image:'regioniFoto/lazio.png'},
-                {id:8, image:'regioniFoto/liguria.png'},
-                {id:9, image:'regioniFoto/lombardia.png'},
-                {id:10, image:'regioniFoto/marche.png'},
-                {id:11, image:'regioniFoto/molise.png'},
-                {id:12, image:'regioniFoto/piemonte.png'},
-                {id:13, image:'regioniFoto/puglia.png'},
-                {id:14, image:'regioniFoto/sardegna.png'},
-                {id:15, image:'regioniFoto/sicilia.png'},
-                {id:16, image:'regioniFoto/toscana.png'},
-                {id:17, image:'regioniFoto/trentino-alto-adige.png'},
+                {id:2, image:'regioniFoto/calabria.png'},
+                {id:3, image:'regioniFoto/campania.png'},
+                {id:4, image:'regioniFoto/emilia-romagna.png'},
+                {id:5, image:'regioniFoto/friuli-venezia-giulia.png'},
+                {id:6, image:'regioniFoto/lazio.png'},
+                {id:7, image:'regioniFoto/liguria.png'},
+                {id:8, image:'regioniFoto/lombardia.png'},
+                {id:9, image:'regioniFoto/marche.png'},
+                {id:10, image:'regioniFoto/molise.png'},
+                {id:11, image:'regioniFoto/trentino-alto-adige.png'},
+                {id:12, image:'regioniFoto/trentino-alto-adige.png'},
+                {id:13, image:'regioniFoto/piemonte.png'},
+                {id:14, image:'regioniFoto/puglia.png'},
+                {id:15, image:'regioniFoto/sardegna.png'},
+                {id:16, image:'regioniFoto/sicilia.png'},
+                {id:17, image:'regioniFoto/toscana.png'},
                 {id:18, image:'regioniFoto/umbria.png'},
                 {id:19, image:'regioniFoto/valle-daosta.png'},
                 {id:20, image:'regioniFoto/veneto.png'}
@@ -40,6 +40,8 @@ var regione = new Vue({
             else return param;
         },
         showRegione: function(i){
+            console.log("Index selezionato =", this.regioneSelezionata)
+            console.log("Nome regione = ", this.regioni[this.regioneSelezionata].denominazione_regione)
             this.loading=true;
             setTimeout(() => {
                 this.regioneSelezionata=i;
