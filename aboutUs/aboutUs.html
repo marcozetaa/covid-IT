@@ -1,6 +1,3 @@
-<?php
-  include('../server.php');
-?>
 
 <!DOCTYPE HTML>
 <html>
@@ -21,19 +18,23 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	</head>
-	<body onload="assegnaEvent();">
+	<body onload="assegnaEvent();" >
 
 		<!-- Header -->
-			<header id="header">
-				<img class="logo" src="../Logo.jpg"> 
-				<div class="inner">
-					<nav id="nav">
-						<a class="navbar" href="../Homepage/homepage.html">Homepage</a>
-						<a class="navbar" href="../Regioni/regioni.html">Regioni</a>
-						<a class="navbar" href="../paginaLogin/login.php"><span class="glyphicon glyphicon-user"></span>Sign in</a>
-					</nav>
-				</div>
-			</header>
+		<header style="background-color: #09688b;">
+			<div style="height: 100px;">
+			  <img id="logo" class="logo" src="../Logo.jpg">
+			  <h1 class="title"><b>COVID-19 ITALIA</b></h1>
+			  <nav>
+				<ul>
+				  <li><a href="../Homepage/homepage.html">Homepage</a>
+				  </li>
+				  <li><a href="../Regioni/regioni.html">Regioni</a>
+				  </li>
+				</ul>
+			  </nav>
+			</div>
+		  </header>
 
 		<!-- Banner -->
 		<section id="banner">
@@ -68,18 +69,19 @@
 					<div class="flex flex-2">
 						<article>
 							<div class="image round">
+								<img src="images/marco.jpg" alt="Pic 01" />
 							</div>
 							<header>
 								<h3>Marco Zanghieri<br />Ingegnere informatico</h3>
 							</header>
-							<p>Studente di Ingegneria Informatica alla Sapienza</p>
+							<p>Studente magistrale del Politecnico di Milano</p>
 							<footer>
 								<a href="https://www.instagram.com/marcozeta.jpeg/" class="button">Instagram</a>
 							</footer>
 						</article>
 						<article>
 							<div class="image round">
-								<img src="images/pic02.jpg" alt="Pic 02" />
+								<img src="images/benedetta.jpg" alt="Pic 02" />
 							</div>
 							<header>
 								<h3>Benedetta Zelada<br />Ingegnere Informatico</h3>
@@ -93,7 +95,7 @@
 				</div>
 			</section>
 
-		<!-- Footer -->
+		<!-- Footer 
 			<footer id="footer">
 				<div class="inner">
 					<h3><span class="glyphicon glyphicon-envelope"></span>	Contattaci</h3>
@@ -117,7 +119,7 @@
 					
 				</div>
 			</footer>
-
+			-->
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>

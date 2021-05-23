@@ -47,8 +47,8 @@
         <div id="dataoutput" class="card">
           <h2 style="font-size: 30px; padding-bottom: 20px; color: rgb(235,184,29);">{{ nomeRegione }}</h2>
           <h5 style="color: white;">Ultimo aggiornamento : {{ data }}</h5>
-          <img v-bind:src="image"></img>
-          <div class="container">
+          <img id="img-region" v-bind:src="image"></img>
+          <div class="container" style="width: 100%;">
             <div class="row">
               <table>
                 <thead>
@@ -118,8 +118,8 @@
         <h2 style="text-align: center; color: rgb(235,184,29);">LISTA REGIONI</h2>
         <div class="select-box">
           <div v-for="(x,index) in regioni" class="select-box__current" >
-            <label class="select-box__option" for="index" v-on:click="showRegione(index)">
-              {{x.denominazione_regione}}
+            <label class="select-box__option" for="index" v-on:click="showRegione(index);resize('img-region')">
+              {{x.denominazione_regione}} 
             </label>
           </div>
         </div>
@@ -129,6 +129,18 @@
 
 
   </section>
+  <script>
+    function resize(id){
+      if(screen.width < 526){
+        console.log("Questo è il caso!")
+        document.getElementById(id).width = screen.width+"px";
+      }
+      else{
+        document.getElementById(id).width = "526px";
+      }
+    }
+    resize("img-region");
+  </script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script type="text/javascript" src="regioniScriptVue.js"></script>
 </body>
