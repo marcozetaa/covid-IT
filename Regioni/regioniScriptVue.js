@@ -101,6 +101,8 @@ var regione = new Vue({
             return this.regioni[this.regioneSelezionata].note_it;
         },
         image: function(){
+            console.log("Regione Selezionata "+this.regioneSelezionata);
+            
             return this.immagini[this.regioneSelezionata].image;
         },
         computeColor: function(){

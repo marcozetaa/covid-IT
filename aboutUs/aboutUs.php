@@ -68,7 +68,6 @@
 					<div class="flex flex-2">
 						<article>
 							<div class="image round">
-								<img src="images/pic01.jpg" alt="Pic 01" />
 							</div>
 							<header>
 								<h3>Marco Zanghieri<br />Ingegnere informatico</h3>

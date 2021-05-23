@@ -1,0 +1,156 @@
+Date : 2020-07-15 11:44:37
+Directory : c:\xampp\htdocs\covid-IT\Homepage
+Total : 102 files,  45779 codes, 3956 comments, 7807 blanks, all 57542 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| CSS        |         16 |     26,462 |        118 |      3,075 |     29,655 |
+| JavaScript |         32 |     16,728 |      3,580 |      4,228 |     24,536 |
+| SCSS       |         40 |      2,196 |        252 |        482 |      2,930 |
+| PHP        |          1 |        170 |          0 |          6 |        176 |
+| HTML       |          1 |        119 |          6 |          4 |        129 |
+| XML        |         10 |         60 |          0 |         10 |         70 |
+| JSON       |          2 |         44 |          0 |          2 |         46 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                 | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                    |        102 |     45,779 |      3,956 |      7,807 |     57,542 |
+| ..                                                                                   |         51 |     22,941 |      1,975 |      3,906 |     28,822 |
+| ..\HomepageLogged                                                                    |         51 |     22,941 |      1,975 |      3,906 |     28,822 |
+| ..\HomepageLogged\assets                                                             |         35 |      1,303 |        211 |        287 |      1,801 |
+| ..\HomepageLogged\assets\brand                                                       |          3 |         15 |          0 |          3 |         18 |
+| ..\HomepageLogged\assets\css                                                         |          1 |          1 |          7 |          0 |          8 |
+| ..\HomepageLogged\assets\img                                                         |          3 |         37 |          0 |          3 |         40 |
+| ..\HomepageLogged\assets\img\favicons                                                |          3 |         37 |          0 |          3 |         40 |
+| ..\HomepageLogged\assets\js                                                          |          8 |        152 |         78 |         40 |        270 |
+| ..\HomepageLogged\assets\js\src                                                      |          3 |        144 |         39 |         38 |        221 |
+| ..\HomepageLogged\assets\js\vendor                                                   |          4 |          4 |         21 |          2 |         27 |
+| ..\HomepageLogged\assets\scss                                                        |         20 |      1,098 |        126 |        241 |      1,465 |
+| ..\HomepageLogged\css                                                                |          6 |     12,964 |         41 |      1,467 |     14,472 |
+| ..\HomepageLogged\js                                                                 |          4 |      7,935 |      1,712 |      2,024 |     11,671 |
+| assets                                                                               |         35 |      1,303 |        211 |        287 |      1,801 |
+| assets\brand                                                                         |          3 |         15 |          0 |          3 |         18 |
+| assets\css                                                                           |          1 |          1 |          7 |          0 |          8 |
+| assets\img                                                                           |          3 |         37 |          0 |          3 |         40 |
+| assets\img\favicons                                                                  |          3 |         37 |          0 |          3 |         40 |
+| assets\js                                                                            |          8 |        152 |         78 |         40 |        270 |
+| assets\js\src                                                                        |          3 |        144 |         39 |         38 |        221 |
+| assets\js\vendor                                                                     |          4 |          4 |         21 |          2 |         27 |
+| assets\scss                                                                          |         20 |      1,098 |        126 |        241 |      1,465 |
+| css                                                                                  |          6 |     12,964 |         41 |      1,467 |     14,472 |
+| js                                                                                   |          4 |      7,935 |      1,712 |      2,024 |     11,671 |
++--------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                             | language   | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\brand\bootstrap-outline.svg           | XML        |          5 |          0 |          1 |          6 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\brand\bootstrap-punchout.svg          | XML        |          5 |          0 |          1 |          6 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\brand\bootstrap-solid.svg             | XML        |          5 |          0 |          1 |          6 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\css\docs.min.css                      | CSS        |          1 |          7 |          0 |          8 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\img\favicons\browserconfig.xml        | XML        |         11 |          0 |          1 |         12 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\img\favicons\manifest.json            | JSON       |         22 |          0 |          1 |         23 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\img\favicons\safari-pinned-tab.svg    | XML        |          4 |          0 |          1 |          5 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\js\docs.min.js                        | JavaScript |          4 |         18 |          0 |         22 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\js\src\application.js                 | JavaScript |         70 |         23 |         20 |        113 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\js\src\ie-emulation-modes-warning.js  | JavaScript |         34 |          8 |          6 |         48 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\js\src\search.js                      | JavaScript |         40 |          8 |         12 |         60 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\js\vendor\anchor.min.js               | JavaScript |          1 |          8 |          0 |          9 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\js\vendor\bs-custom-file-input.min.js | JavaScript |          1 |          6 |          1 |          8 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\js\vendor\clipboard.min.js            | JavaScript |          1 |          6 |          0 |          7 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\js\vendor\jquery.slim.min.js          | JavaScript |          1 |          1 |          1 |          3 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_ads.scss                        | SCSS       |         29 |          4 |          7 |         40 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_algolia.scss                    | SCSS       |        124 |          8 |         24 |        156 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_anchor.scss                     | SCSS       |          9 |          0 |          2 |         11 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_brand.scss                      | SCSS       |         64 |         10 |         15 |         89 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_browser-bugs.scss               | SCSS       |          8 |          3 |          2 |         13 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_buttons.scss                    | SCSS       |         28 |          3 |          7 |         38 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_callouts.scss                   | SCSS       |         28 |          4 |          9 |         41 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_clipboard-js.scss               | SCSS       |         28 |          3 |          6 |         37 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_colors.scss                     | SCSS       |         12 |          3 |          3 |         18 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_component-examples.scss         | SCSS       |        299 |         24 |         61 |        384 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_content.scss                    | SCSS       |         91 |         10 |         24 |        125 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_footer.scss                     | SCSS       |         29 |          3 |          9 |         41 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_masthead.scss                   | SCSS       |         40 |          2 |         11 |         53 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_nav.scss                        | SCSS       |         57 |          3 |         12 |         72 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_placeholder-img.scss            | SCSS       |          8 |          4 |          4 |         16 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_sidebar.scss                    | SCSS       |        124 |         10 |         29 |        163 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_skippy.scss                     | SCSS       |         15 |          0 |          3 |         18 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_syntax.scss                     | SCSS       |         73 |          1 |          5 |         79 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\_variables.scss                  | SCSS       |         10 |          5 |          3 |         18 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\assets\scss\docs.scss                        | SCSS       |         22 |         26 |          5 |         53 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\colori.js                                    | JavaScript |         13 |          0 |          4 |         17 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\css\bootstrap-grid.css                       | CSS        |      3,681 |          7 |        211 |      3,899 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\css\bootstrap-grid.min.css                   | CSS        |          1 |          6 |          0 |          7 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\css\bootstrap-reboot.css                     | CSS        |        264 |          8 |         55 |        327 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\css\bootstrap-reboot.min.css                 | CSS        |          1 |          7 |          0 |          8 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\css\bootstrap.css                            | CSS        |      9,016 |          7 |      1,201 |     10,224 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\css\bootstrap.min.css                        | CSS        |          1 |          6 |          0 |          7 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\grafico.js                                   | JavaScript |         96 |          0 |          7 |        103 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\home.js                                      | JavaScript |        135 |          0 |         17 |        152 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\homepage.php                                 | PHP        |        170 |          0 |          6 |        176 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\js\bootstrap.bundle.js                       | JavaScript |      4,586 |      1,375 |      1,174 |      7,135 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\js\bootstrap.bundle.min.js                   | JavaScript |          1 |          6 |          0 |          7 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\js\bootstrap.js                              | JavaScript |      3,347 |        325 |        850 |      4,522 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\js\bootstrap.min.js                          | JavaScript |          1 |          6 |          0 |          7 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\sketch.js                                    | JavaScript |         61 |          0 |         24 |         85 |
+| c:\xampp\htdocs\covid-IT\HomepageLogged\stile.css                                    | CSS        |        264 |         11 |         70 |        345 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\brand\bootstrap-outline.svg                 | XML        |          5 |          0 |          1 |          6 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\brand\bootstrap-punchout.svg                | XML        |          5 |          0 |          1 |          6 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\brand\bootstrap-solid.svg                   | XML        |          5 |          0 |          1 |          6 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\css\docs.min.css                            | CSS        |          1 |          7 |          0 |          8 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\img\favicons\browserconfig.xml              | XML        |         11 |          0 |          1 |         12 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\img\favicons\manifest.json                  | JSON       |         22 |          0 |          1 |         23 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\img\favicons\safari-pinned-tab.svg          | XML        |          4 |          0 |          1 |          5 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\js\docs.min.js                              | JavaScript |          4 |         18 |          0 |         22 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\js\src\application.js                       | JavaScript |         70 |         23 |         20 |        113 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\js\src\ie-emulation-modes-warning.js        | JavaScript |         34 |          8 |          6 |         48 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\js\src\search.js                            | JavaScript |         40 |          8 |         12 |         60 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\js\vendor\anchor.min.js                     | JavaScript |          1 |          8 |          0 |          9 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\js\vendor\bs-custom-file-input.min.js       | JavaScript |          1 |          6 |          1 |          8 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\js\vendor\clipboard.min.js                  | JavaScript |          1 |          6 |          0 |          7 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\js\vendor\jquery.slim.min.js                | JavaScript |          1 |          1 |          1 |          3 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_ads.scss                              | SCSS       |         29 |          4 |          7 |         40 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_algolia.scss                          | SCSS       |        124 |          8 |         24 |        156 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_anchor.scss                           | SCSS       |          9 |          0 |          2 |         11 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_brand.scss                            | SCSS       |         64 |         10 |         15 |         89 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_browser-bugs.scss                     | SCSS       |          8 |          3 |          2 |         13 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_buttons.scss                          | SCSS       |         28 |          3 |          7 |         38 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_callouts.scss                         | SCSS       |         28 |          4 |          9 |         41 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_clipboard-js.scss                     | SCSS       |         28 |          3 |          6 |         37 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_colors.scss                           | SCSS       |         12 |          3 |          3 |         18 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_component-examples.scss               | SCSS       |        299 |         24 |         61 |        384 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_content.scss                          | SCSS       |         91 |         10 |         24 |        125 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_footer.scss                           | SCSS       |         29 |          3 |          9 |         41 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_masthead.scss                         | SCSS       |         40 |          2 |         11 |         53 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_nav.scss                              | SCSS       |         57 |          3 |         12 |         72 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_placeholder-img.scss                  | SCSS       |          8 |          4 |          4 |         16 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_sidebar.scss                          | SCSS       |        124 |         10 |         29 |        163 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_skippy.scss                           | SCSS       |         15 |          0 |          3 |         18 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_syntax.scss                           | SCSS       |         73 |          1 |          5 |         79 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\_variables.scss                        | SCSS       |         10 |          5 |          3 |         18 |
+| c:\xampp\htdocs\covid-IT\Homepage\assets\scss\docs.scss                              | SCSS       |         22 |         26 |          5 |         53 |
+| c:\xampp\htdocs\covid-IT\Homepage\colori.js                                          | JavaScript |         13 |          0 |          4 |         17 |
+| c:\xampp\htdocs\covid-IT\Homepage\css\bootstrap-grid.css                             | CSS        |      3,681 |          7 |        211 |      3,899 |
+| c:\xampp\htdocs\covid-IT\Homepage\css\bootstrap-grid.min.css                         | CSS        |          1 |          6 |          0 |          7 |
+| c:\xampp\htdocs\covid-IT\Homepage\css\bootstrap-reboot.css                           | CSS        |        264 |          8 |         55 |        327 |
+| c:\xampp\htdocs\covid-IT\Homepage\css\bootstrap-reboot.min.css                       | CSS        |          1 |          7 |          0 |          8 |
+| c:\xampp\htdocs\covid-IT\Homepage\css\bootstrap.css                                  | CSS        |      9,016 |          7 |      1,201 |     10,224 |
+| c:\xampp\htdocs\covid-IT\Homepage\css\bootstrap.min.css                              | CSS        |          1 |          6 |          0 |          7 |
+| c:\xampp\htdocs\covid-IT\Homepage\grafico.js                                         | JavaScript |         96 |          0 |          7 |        103 |
+| c:\xampp\htdocs\covid-IT\Homepage\home.js                                            | JavaScript |         86 |          0 |         16 |        102 |
+| c:\xampp\htdocs\covid-IT\Homepage\homepage.html                                      | HTML       |        119 |          6 |          4 |        129 |
+| c:\xampp\htdocs\covid-IT\Homepage\js\bootstrap.bundle.js                             | JavaScript |      4,586 |      1,375 |      1,174 |      7,135 |
+| c:\xampp\htdocs\covid-IT\Homepage\js\bootstrap.bundle.min.js                         | JavaScript |          1 |          6 |          0 |          7 |
+| c:\xampp\htdocs\covid-IT\Homepage\js\bootstrap.js                                    | JavaScript |      3,347 |        325 |        850 |      4,522 |
+| c:\xampp\htdocs\covid-IT\Homepage\js\bootstrap.min.js                                | JavaScript |          1 |          6 |          0 |          7 |
+| c:\xampp\htdocs\covid-IT\Homepage\sketch.js                                          | JavaScript |         54 |          0 |         21 |         75 |
+| c:\xampp\htdocs\covid-IT\Homepage\stile.css                                          | CSS        |        268 |         11 |         71 |        350 |
+| Total                                                                                |            |     45,779 |      3,956 |      7,807 |     57,542 |
++--------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
